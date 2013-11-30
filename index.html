@@ -428,6 +428,8 @@ function OpenOriginal(x) {
   </p>
   <p>翻訳元の文書はまだワーキング・ドラフト(Working Draft)です。現状ではまだ説明が不足している部分があったり、今後も頻繁に更新される可能性がある事に注意してください。
   </p>
+  <p><b class="annotate">注:</b> 現在ネイティブのWeb MIDI APIの実装が進んでいるのは、Mac版のChrome (Canary)であり、且つflagで有効化する必要があります。それ以外の環境で動作させるには Polyfill(<a href="http://cwilso.github.io/WebMIDIAPIShim/">WebMIDIAPIShim</a>)と<a href="http://jazz-soft.net/doc/Jazz-Plugin/">JazzPlugin</a>が必要になります。また、これらの環境では今のところ、MIDIAccessオブジェクトのinputs/outputsの扱いがこの文書の仕様とは少し異なっています。
+  </p>
   <p>
     日本語訳GitHub : <b><a href="https://github.com/g200kg/web-midi-api-ja">https://github.com/g200kg/web-midi-api-ja</a></b><br/>
     日本語訳公開URL : <b><a href="http://g200kg.github.io/web-midi-api-ja/">http://g200kg.github.io/web-midi-api-ja/</a></b>
@@ -437,7 +439,7 @@ function OpenOriginal(x) {
     誤りその他があればGitHubページ、下のサイト経由などで連絡をお願いいたします。<br/>
     <b><a href="http://www.g200kg.com/">http://www.g200kg.com/</a></b><br/>
   </p>
-  <p>2013年11月27日</p>
+  <p>2013年12月01日</p>
 </div>
 <hr/>
   <p>
@@ -693,10 +695,10 @@ function OpenOriginal(x) {
       </ul>
     </li>
     <li class="tocline">
-      <a href="#midiaccess-interface" class="tocxref"><span class="secno">5. </span><span class="formerLink"><code>MIDIAccess</code></span> Interface</a>
+      <a href="#midiaccess-interface" class="tocxref"><span class="secno">5. </span><span class="formerLink"><code>MIDIAccess</code></span> インターフェース</a>
       <ul class="toc">
         <li class="tocline">
-          <a href="#attributes-2" class="tocxref"><span class="secno">5.1 </span>Attributes</a>
+          <a href="#attributes-2" class="tocxref"><span class="secno">5.1 </span>属性</a>
         </li>
       </ul>
     </li>
@@ -814,7 +816,7 @@ function OpenOriginal(x) {
         <!--The approaches taken by this API are similar to those taken in Apple's CoreMIDI API and Microsoft's Windows MIDI API; that is, the API is designed to represent the low-level software protocol of MIDI, in order to enable developers to build powerful MIDI software on top.  The API enables the developer to enumerate input and output interfaces, and send and receive MIDI messages, but (similar to the aforementioned APIs) it does not attempt to semantically define or interpret MIDI messages beyond what is necessary to robustly support current devices.-->
       </p>
       <p>
-        Web MIDI APIはシーケンサーなどの高レベルの概念を直接実装する事は意図していません。例えば、スタンダードMIDIファイルを直接サポートしませんが、Web MIDI APIの上にスタンダードMIDIファイルプレーヤーを構築する事は可能です。
+        Web MIDI APIはシーケンサーなどの高レベルの概念を直接実装する事は意図していません。例えば、スタンダードMIDIファイルは直接サポートされませんが、Web MIDI APIの上にスタンダードMIDIファイルプレーヤーを構築する事は可能です。
         また、ジェネラルMIDIが行っているようにパッチやコントローラーのアサインを意味的に定める事も意図しません。それらの解釈はWeb MIDI APIの範囲外です(繰り返しになりますが、Web MIDI APIを通してジェネラルMIDIを簡単に利用する事はできます)。
         <!--The Web MIDI API is not intended to directly implement high-level concepts such as sequencing; it does not directly support Standard MIDI Files, for example, although a Standard MIDI File player can be built on top of the Web MIDI API.  It is also not intended to semantically capture patches or controller assignments, as General MIDI does; such interpretation is outside the scope of the Web MIDI API (though again, General MIDI can easily be utilized through the Web MIDI API).-->
       </p>
@@ -1008,7 +1010,7 @@ function OpenOriginal(x) {
                 <li><p>
                   <em><b>失敗の場合</b></em>：
                   新しい<code><a href="#dfn-domerror" class="internalDFN">DOMError</a></code>を作成し、<var>error</var>とします。
-                  その型は、もしユーザーかセキュリティ設定により、MIDIAccessインスタンスの作成を拒否された場合は<code>"SecurityError"</code>、
+                  その型は、もしユーザーの設定かセキュリティ設定により、MIDIAccessインスタンスの作成を拒否された場合は<code>"SecurityError"</code>、
                   下層のシステムが何らかのエラーを発生した場合は<code>"InvalidStateError"</code>、
                   それ以外の場合は<code>"NotSupportedError"</code>としなくてはなりません。
                   <!--<em><b>failure</b></em>: Let <var>error</var> be a new <code><a href="#dfn-domerror" class="internalDFN">DOMError</a></code>.
