@@ -521,9 +521,9 @@ function OpenOriginal(x) {
 </div>
     <section id="abstract" class="introductory" property="dcterms:abstract" datatype="" typeof="bibo:Chapter" resource="#ref" rel="bibo:Chapter"><h2 aria-level="1" role="heading" id="h2_abstract">概要 <button onclick="OpenOriginal('abstract')">原文</button></h2>
       <p>
-        ユーザーエージェントはそのホストコンピュータやデバイスに接続された音楽デバイス、例えばシンセサイザー、キーボードやその他のコントローラー、ドラムマシンを持つ事があります。
-        広く採用されている、Musical Instrument Digital Interface (MIDI) プロトコルは電子楽器、コントローラー、コンピューター間の通信と同期を可能にします。
-        MIDIはオーディオ信号は送信しません、その代わりに音符に関するイベントメッセージ、音量やビブラートやパンニングなどのパラメータのコントローラー信号、キューやテンポを合わせるためのクロック、あるいはそのシステム固有の(例えばリモートに保存されているシンセサイザー固有のパッチデータなど)の通信を行います。このプロトコルは照明や特殊効果の制御を行うショーコントロールのような、音楽以外での分野でも標準となっています。
+        シンセサイザー、キーボード等のコントローラー、ドラムマシンなど、ユーザーエージェントはそのホストコンピュータやデバイスに接続された音楽機器を持っている場合があります。
+        広く採用されている、Musical Instrument Digital Interface (MIDI) プロトコルは電子楽器、コントローラー、コンピューター間の通信と同期を可能にするものです。
+        MIDIはオーディオ信号は送信しません。その代わりに音符に関するイベントメッセージ、音量やビブラートやパンニングなどのパラメータのコントローラー信号、キューやテンポを合わせるためのクロック、あるいはそのシステム固有の (例えばリモートに保存されているシンセサイザー固有のパッチデータなど) の通信を行います。このプロトコルは照明装置や特殊効果の制御を行うショーコントロールのような、音楽以外での分野でも標準となっています。
         <!--Some user agents have music devices, such as synthesizers, 
         keyboard and other controllers, and drum machines connected to their host computer or device.  The widely adopted 
         Musical Instrument Digital Interface (MIDI) protocol enables 
@@ -538,9 +538,9 @@ function OpenOriginal(x) {
       </p>
       <p>
         この仕様はMIDIプロトコルをサポートするAPIを定義し、Webアプリケーションがクライアントシステム上のMIDI入出力デバイスを列挙、選択し、MIDIメッセージを送信および受信する事を可能にします。
-        ユーザーのシステム上にあるMIDIデバイスへの低レベルアクセスが可能になる事は、音楽に関するものと同じく、非音楽MIDIアプリケーションを構築できるようになる事も意味します。
-        一方でWeb MIDI APIは、意味的なコントローラーのプラットフォームになる訳ではありません。
-        これはMIDI入力と出力インターフェースのメカニズムに触る事ができ、MIDIメッセージをその内容の意味を認識する事なく、送信および受信するという実用的な側面のために設計されています(例えば、コントローラーの値が変わった事やG#7の和音を演奏した時の一組のノートオン・メッセージという以上の、"20Hzでビブラートを掛ける"や"G#7の和音を演奏する"などの意味を持ちません)。
+        ユーザーのシステム上にあるMIDIデバイスへの低レベルアクセスが可能になる事によって、音楽に関するものだけでなく、非音楽関係のMIDIアプリケーションも構築できるようになります。
+        一方でWeb MIDI APIは、音楽やコントローラーの入力の意味を表現するものではありません。
+        これはMIDI入力と出力インターフェースのメカニズムに触れる事ができ、MIDIメッセージをその内容の意味を認識する事なく、送信および受信するという実用的な側面のために設計されています (例えば、"20Hzでビブラートを掛ける"や"G#7の和音を演奏する"と言うような、コントローラーの値が変わった事やG#7の和音を演奏した時の一組のノートオン・メッセージという以上の意味を持ちません)。
          <!--This specification defines an API supporting the MIDI protocol, enabling web applications to enumerate and select MIDI input and output devices on the client system and send and receive MIDI messages. It is intended to enable non-music MIDI applications as well as music ones, by providing low-level access to the MIDI devices available on the users' systems.  The Web MIDI API is not intended to describe music or controller inputs semantically; it is designed to expose the mechanics of MIDI input and output interfaces, and the practical aspects of sending and receiving MIDI messages, without identifying what those actions might mean semantically (e.g., in terms of "modulate the vibrato by 20Hz" or "play a G#7 chord", other than in terms of changing a controller value or sending a set of note-on messages that happen to represent a G#7 chord).-->
       </p>
       <p>
@@ -548,7 +548,7 @@ function OpenOriginal(x) {
         それはこのAPIの意図する所ではありません。 単純に.SMFファイルを再生する、という使用例はこの仕様の範囲ではありません (それは例えばHTML5の <code>&lt;audio&gt;</code>要素のような異なったフォーマットのものとしては考慮されるかも知れません)。
         Web MIDI APIは MIDIに対応するデバイス、例えば外部のシンセサイザーや照明システム、あるいは多くのオペレーティングシステムに組み込まれているソフトウェアシンセサイザーへの直接的なアクセスを可能にする事を意図しています。
         Web MIDI APIはまた明らかに、MIDIコントローラーからの入力に反応するという新種のWeb上のアプリケーションを可能にするために設計されています。
-        Webアプリケーションを制御するために、(キーボード、ギター、管楽器コントローなどの楽器コントローラーとー同様に)物理的なボタンやツマミやスライダーなどを使った、外部ハードウェアコントローラーが使用されるでしょう。
+        Webアプリケーションを制御するために、(キーボード、ギター、管楽器コントローラーなどの楽器コントローラーとー同様に)物理的なボタンやツマミやスライダーなどを使った、外部ハードウェアコントローラーが使用される事になるでしょう。
         <!--To some users, "MIDI" has become synonymous with Standard MIDI Files and General MIDI.  That is not the intent of this API; the use case of simply playing back a .SMF file is not within the purview of this specification (it could be considered a different format to be supported by the HTML5 <code>&lt;audio&gt;</code> element, for example).  The Web MIDI API is intended to enable direct access to devices that respond to MIDI - external synthesizers or lighting systems, for example, or even the software synthesizers that are built in to many common operating systems.  The Web MIDI API is also explicitly designed to enable a new class of applications on the web that can respond to MIDI controller inputs - using external hardware controllers with physical buttons, knobs and sliders (as well as musical controllers like keyboard, guitar or wind instrument controllers) to control web applications.-->
       </p>
       <p>
@@ -1881,7 +1881,7 @@ navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );</pre>
         <!--It's also useful to examine what scenarios are enabled by MIDI, mapped against these features:-->
         </p><ol>
           <li>
-            ショート・メッセージの受信。これはWeb MIDIに取って最も魅力的なもので、キーボード、ドラムパッド、ギター、管楽器コントローラー、DJコントローラ、その他色々な機器からの入力によって楽器をコントロールでき、他のコントロールシナリオと同様にWeb Audio APIで使う事もできます (MIDIは何十億ドルもの規模の音楽制作産業で使われているプロトコルであり、Garagebandのようなコンシューマー・アプリケーションだけでなく、プロ/プロシューマー向けのオーディオ/メディアアプリケーションで使われる、コンピュータに接続するためのツマミやボタンを持った物理的なコントローラーが多数存在します)
+            ショート・メッセージの受信。これはWeb MIDIに取って最も魅力的なもので、キーボード、ドラムパッド、ギター、管楽器コントローラー、DJコントローラー、その他色々な機器からの入力によって楽器をコントロールでき、他のコントロールシナリオと同様にWeb Audio APIで使う事もできます (MIDIは何十億ドルもの規模の音楽制作産業で使われているプロトコルであり、Garagebandのようなコンシューマー・アプリケーションだけでなく、プロ/プロシューマー向けのオーディオ/メディアアプリケーションで使われる、コンピュータに接続するためのツマミやボタンを持った物理的なコントローラーが多数存在します)
             <!--Receiving short messages.  This is the most attractive scenario for Web MIDI, as it enables getting input from keyboards, drum pads, guitars, wind controllers, DJ/controllerist controllers, and more, and use those messages as input to control instruments and features in the Web Audio API as well as other control scenarios (MIDI is the protocol of choice for the multi-billion-dollar music production industry for getting physical controllers like knobs and buttons attached to your computer, both in pro/prosumer audio and media applications as well as consumer applications like Garageband.)-->
           </li><li>
             ショート・メッセージの送信。送信に関しては、魅力として言えば、かなり少なくなります。出力デバイスにハードウェアシンセサイザーのようなものを接続すると言うシナリオは現在のマーケットではそれほど一般的ではありません。ただ大きな例外として、多くのMIDIコントローラーが、インジケータライトの外部ホストコントロールを持っている事でこれが劇的に有用なものに変わります。例えば、非常に一般的なNovationのLaunchpadコントローラーはMIDIノートオン/オフメッセージの送信によってボタンの点灯/消灯や色の変化を行う事ができます。ほとんど全てのDJコントローラーも同様です。
