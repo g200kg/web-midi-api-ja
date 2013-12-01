@@ -428,7 +428,7 @@ function OpenOriginal(x) {
   </p>
   <p>翻訳元の文書はまだワーキング・ドラフト(Working Draft)です。現状ではまだ説明が不足している部分があったり、今後も頻繁に更新される可能性がある事に注意してください。
   </p>
-  <p><b class="annotate">注:</b> 現在ネイティブのWeb MIDI APIの実装が進んでいるのは、Mac版のChrome (Canary)であり、且つflagで有効化する必要があります。それ以外の環境で動作させるには Polyfill(<a href="http://cwilso.github.io/WebMIDIAPIShim/">WebMIDIAPIShim</a>)と<a href="http://jazz-soft.net/doc/Jazz-Plugin/">JazzPlugin</a>が必要になります。また、これらの環境では今のところ、MIDIAccessオブジェクトのinputs/outputsの扱いがこの文書の仕様とは少し異なっています。
+  <p><b class="annotate">注:</b> 現在ネイティブのWeb MIDI APIの実装が進んでいるのは、Mac版のChromeであり、且つflagで有効化する必要があります。それ以外の環境で動作させるには Polyfill(<a href="http://cwilso.github.io/WebMIDIAPIShim/">WebMIDIAPIShim</a>)と<a href="http://jazz-soft.net/doc/Jazz-Plugin/">JazzPlugin</a>が必要になります。また、これらの環境では今のところ、MIDIAccessオブジェクトのinputs/outputsの扱いがこの文書の仕様とは少し異なっています。
   </p>
   <p>
     日本語訳GitHub : <b><a href="https://github.com/g200kg/web-midi-api-ja">https://github.com/g200kg/web-midi-api-ja</a></b><br/>
@@ -801,8 +801,7 @@ function OpenOriginal(x) {
     <section class="informative" id="introduction">
       <!--OddPage--><h2 aria-level="1" role="heading" id="h2_introduction"><span class="secno">1. </span>序文 <button onclick="OpenOriginal('introduction')">原文</button></h2><p><em>このセクションは非基準情報です。</em></p>
       <p>
-        Web MIDI API仕様はWeb開発者がMIDIデバイスに対して列挙、操作、アクセスを行う手段について定義しています。
-        例えば、他のデバイスが接続されたハードウェアMIDIポートやUSB-MIDI仕様をサポートしたUSBデバイスなどに対するインターフェースがあります。
+        Web MIDI API仕様はWeb開発者がMIDIデバイス、例えば機器が接続されるハードウェアMIDIポートやUSB-MIDI仕様をサポートしたUSB機器などのインターフェース、に対して列挙、操作、アクセスを行う手段を定義しています。
         MIDIに対するWeb APIを持つ事で、Webアプリケーションは既存のソフトウェアやハードウェアのシンセサイザー、ハードウェアの音楽コントローラー、照明システムやその他のMIDIで制御される機器/機械を使う事ができるようになります。このAPIは広い範囲の使用例を念頭に定義されています。
         <!--The Web MIDI API specification defines a means for web developers to
         enumerate, manipulate and access MIDI devices - for example interfaces that may provide hardware MIDI ports with other devices plugged in to them and USB devices that support the USB-MIDI specification. Having a Web API for MIDI enables web applications that use existing software and
@@ -811,8 +810,8 @@ function OpenOriginal(x) {
       </p>
       <p>
         このAPIが取るアプローチはApple社のCoreMIDIやMicrosoft社のWindows MIDI APIに似ています。
-        それは、APIは開発者がその上に有用なMIDIソフトウェアを構築できるように、MIDIの低レベルのソフトウェアプロトコルを表すように設計されていると言う事です。
-        APIは開発者が入出力インターフェースを列挙し、MIDIメッセージを送受信する事を可能にしますが、(前述のAPIと同様に)現存するデバイスを確実にサポートするために必要な範囲を超えて、MIDIメッセージの意味を定義したり解釈する事は行いません。
+        つまり、APIは開発者がその上に有用なMIDIソフトウェアを構築できるように、MIDIの低レベルのソフトウェアプロトコルを表すように設計されていると言う事です。
+        APIは開発者が入出力インターフェースを列挙し、MIDIメッセージを送受信する事を可能にしますが、(前述の他のAPIと同様に)現存するデバイスを確実にサポートするために必要な範囲を超えて、MIDIメッセージの意味を定義したり解釈する事は行いません。
         <!--The approaches taken by this API are similar to those taken in Apple's CoreMIDI API and Microsoft's Windows MIDI API; that is, the API is designed to represent the low-level software protocol of MIDI, in order to enable developers to build powerful MIDI software on top.  The API enables the developer to enumerate input and output interfaces, and send and receive MIDI messages, but (similar to the aforementioned APIs) it does not attempt to semantically define or interpret MIDI messages beyond what is necessary to robustly support current devices.-->
       </p>
       <p>
