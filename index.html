@@ -918,7 +918,7 @@ function OpenOriginal(x) {
 
               <p>
                 MIDIアクセスの要求、特にシステムエクスクルーシブへのアクセスは、ユーザーに対してプロンプトを出し、MIDIデバイスにアクセスする旨の許可を得なくてはなりません(<em class="rfc2119" title="SHOULD">SHOULD</em>)。
-               シナリオによっては、この許可は暗黙的あるいは明示的に既に得られている場合もあり、この場合、このプロンプトは表示されないかも知れません。
+               シナリオによっては、この許可は暗黙的あるいは明示的に既に得られている事もあり、この場合にはこのプロンプトは表示されないかも知れません。
                もしユーザーが承諾するか、他の手段で許可されている場合、Promiseの<var>resolveCallback</var>が<code><a href="#idl-def-MIDISuccessCallback" class="idlType"><code>MIDISuccessCallback</code></a></code>として呼び出されます (つまり、<code><a href="#idl-def-MIDIAccess" class="idlType"><code>MIDIAccess</code></a></code>オブジェクトと<code><a href="#idl-def-MIDIOptions" class="idlType"><code>MIDIOptions</code></a></code>オブジェクトが引数となります)。
                 必須ではありませんが、下層のシステムはユーザーが特定のMIDIインターフェースをこのAPIを通じて選択できるように、(個別の基準で選択して)選ぶ事もあります。
                 また、システムエクスクルーシブはプライバシー情報をより多く含んでいるため、そのサポートを要求されたかどうかによって、システムはプロンプト(あるいは何か他の手段で)メッセージを出すかも知れません。
@@ -937,12 +937,12 @@ function OpenOriginal(x) {
                 requested, as system exclusive has greater privacy and
                 security implications.--></p>
               <p>
-                ユーザーが拒否、あるいは呼び出しが別の理由で許可されていない場合、(もし設定されていれば)Promiseの<var>rejectCallback</var>が<code><a href="#idl-def-MIDIErrorCallback" class="idlType"><code>MIDIErrorCallback</code></a></code>として呼び出されます。
+                ユーザーが拒否、あるいは別の理由で呼び出しが許可されていない場合、(もし設定されていれば)Promiseの<var>rejectCallback</var>が<code><a href="#idl-def-MIDIErrorCallback" class="idlType"><code>MIDIErrorCallback</code></a></code>として呼び出されます。
                 <!--If the user declines or the call is denied for any other reason, the Promise's 
                 <var>rejectCallback</var> (if any) is invoked as a <code><a href="#idl-def-MIDIErrorCallback" class="idlType"><code>MIDIErrorCallback</code></a></code>.-->
               </p>
               <p>
-                <dfn id="dom-navigator-requestmidiaccess"><code>requestMIDIAccess</code></dfn>メソッドが呼ばれた時、ユーザーエージェントは以下の<dfn id="dfn-algorithm-to-request-midi-access">MIDIアクセス・リクエストアルゴリズム</dfn>を実行しなくてはなりません：
+                <dfn id="dom-navigator-requestmidiaccess"><code>requestMIDIAccess</code></dfn>メソッドが呼ばれた時、ユーザーエージェントは以下の<dfn id="dfn-algorithm-to-request-midi-access">MIDIアクセス・リクエストアルゴリズム</dfn>を実行しなくてはなりません(<em class="rfc2119" title="MUST">MUST</em>)：
                 <!--When the <dfn id="dom-navigator-requestmidiaccess">
                 <code>requestMIDIAccess</code></dfn> method is called, the user
                 agent <em class="rfc2119" title="MUST">MUST</em> run the <dfn id="dfn-algorithm-to-request-midi-access">algorithm to request MIDI Access</dfn>:-->
@@ -1034,10 +1034,10 @@ function OpenOriginal(x) {
 };</span></pre><section id="dictionary-midioptions-members"><h4 aria-level="3" role="heading" id="h4_dictionary-midioptions-members"><span class="secno">4.2.1 </span>ディクショナリ <a class="idlType" href="#idl-def-MIDIOptions"><code>MIDIOptions</code></a> メンバー <button onclick="OpenOriginal('dictionary-midioptions-members')">原文</button></h4>
 <dl class="dictionary-members"><dt id="widl-MIDIOptions-sysex"><code>sysex</code> <span class="idlMemberType">boolean</span>型</dt><dd>
             <p>
-              このメンバーは与えられた<a href="#idl-def-MIDIAccess" class="idlType"><code>MIDIAccess</code></a>オブジェクトによってシステムエクスクルーシブ・メッセージの送受信を行う事を要求、または許可する事を表します。
-              このメンバーがtrueに設定されたオプションが<code><a href="#dom-navigator-requestmidiaccess" class="internalDFN">requestMIDIAccess</a></code>に渡され、しかし、(ポリシーまたはユーザーアクションによって)、システムエクスクルーシブのサポートが否定された場合、アクセス要求は失敗し、<code>"SecurityError"</code>エラーが発生します。
-              もし、このサポートを要求せず、(そして許可された)場合、ユーザーがシステムエクスクルーシブ・メッセージを送信しようとした時には例外が発生し、
-              そのポートで受信するシステムエクスクルーシブ・メッセージは全て無反応のままマスクされます。
+              このメンバーはその<a href="#idl-def-MIDIAccess" class="idlType"><code>MIDIAccess</code></a>オブジェクトによってシステムエクスクルーシブ・メッセージの送受信を行う事を要求、または許可する事を表します。
+              このメンバーがtrueに設定されたオプションが<code><a href="#dom-navigator-requestmidiaccess" class="internalDFN">requestMIDIAccess</a></code>に渡され、しかし、(ポリシーまたはユーザーアクションによって)、システムエクスクルーシブのサポートが否定された場合、アクセス要求は失敗し<code>"SecurityError"</code>エラーが発生します。
+              もし、このサポートを要求しない(そして許可された)場合、ユーザーがシステムエクスクルーシブ・メッセージを送信しようとした時には例外が発生し、
+              そのポートでシステムエクスクルーシブ・メッセージを受信した時には全て無反応のままマスクされます。
               <!--This member informs the system whether the ability to send and receive system exclusive messages is requested or allowed on a given <a href="#idl-def-MIDIAccess" class="idlType"><code>MIDIAccess</code></a> object.  On the option passed to <code><a href="#dom-navigator-requestmidiaccess" class="internalDFN">requestMIDIAccess</a></code>, if this member is set to true, but system exclusive support is denied (either by policy or by user action), the access request will fail with a <code>"SecurityError"</code> error.  If this support is not requested (and allowed), the system will throw exceptions if the user tries to send system exclusive messages, and will silently mask out any system exclusive messages received on the port.--></p>
             <p>
               resolveCallbackに渡されるパラメータの<code>options</code>では、このメンバーはシステムエクスクルーシブがMIDIAccess上で許可されている事を表します。
@@ -1091,7 +1091,7 @@ function OpenOriginal(x) {
       document.getElementById("inputportselector").add(opt);
     });
 
-    // あるいは、こういう書き方もできます： <!--or you could express as:-->
+    // あるいは、こういう書き方もできます： <!--or you could express as:--><span class="annotate">(訳注：このコードにはまだ誤りが含まれていると思われます)</span>
     for (input in inputs) {
       var opt = document.createElement("option");
       opt.text = input.name;
@@ -1146,7 +1146,7 @@ function OpenOriginal(x) {
       document.getElementById("outputportselector").add(opt);
     });
 
-    // あるいは、こういう書き方もできます： <!--or you could express as:-->
+    // あるいは、こういう書き方もできます： <!--or you could express as:--><span class="annotate">(訳注：このコードにはまだ誤りが含まれていると思われます)</span>
     for (output in outputs) {
       var opt = document.createElement("option");
       opt.text = input.name;
@@ -1168,7 +1168,7 @@ function OpenOriginal(x) {
               to enumerate and obtain access to individual MIDI devices.-->
             </p><p>
               <em>注</em>： この仕様での、"MIDIデバイス"という用語はホストシステム上で使用可能なMIDIインターフェースを指します。
-              例えば、もし1つのハードウェアのMIDIアダプターがホストシステムに接続されている時、例え幾つかのMIDI対応機器(シンセサイザーやドラムマシン)がそのアダプターのMIDIポートに繋がれていても、それは1つのデバイスとして列挙されます。
+              例えば、もしハードウェアのMIDIアダプターが1つだけホストシステムに接続されている時、例え幾つかのMIDI対応機器(シンセサイザーやドラムマシン)がそのアダプターのMIDIポートに繋がれていても、それは1つのデバイスとして列挙されます。
               <!--<em>Note</em>: The term "MIDI device" in this specification 
               refers to a MIDI interface available to the host system; for 
               example, if a hardware MIDI adapter is connected to the host
@@ -1297,8 +1297,8 @@ function OpenOriginal(x) {
           <p>
             ポートのユニークIDです。
             開発者はこれを、ユーザーがアプリケーション内で選択したポートを記憶しておくために使用できます。
-            ユーザーエージェントは<code>id</code>がそのポートだけのユニークなものである事を保証しなくてはなりません<em class="rfc2119" title="MUST">MUST</em>。
-            ユーザーエージェントはそのidがアプリケーションのインスタンスをまたいで、例えば、システムがリブートした時、デバイスがシステムから取り外された時にも維持される事を保証しなくてはなりません<em class="rfc2119" title="SHOULD">SHOULD</em>。
+            ユーザーエージェントは<code>id</code>がそのポートだけのユニークなものである事を保証しなくてはなりません(<em class="rfc2119" title="MUST">MUST</em>)。
+            ユーザーエージェントはそのidがアプリケーションのインスタンスをまたいで、例えば、システムがリブートした時、デバイスがシステムから取り外された時にも維持される事を保証しなくてはなりません(<em class="rfc2119" title="SHOULD">SHOULD</em>)。
             アプリケーションはMIDI設定を再現するため、これらのidをローカルにキャッシュしようとするかも知れません。
             システムによっては、完全に永続的なユニーク性を持つ識別手段をサポートしていないかも知れず、そのような場合、別のインターフェースが接続されたりシステムから切断された時に識別を維持し続けるのは難易度が高くなるでしょう (これによって要求されたポートのインデックスがずれるかも知れません)。
             システムはMIDI APIのインスタンスをまたいだポートのマッチングに最善の方法を取る事が期待されます： 
@@ -1354,7 +1354,7 @@ function OpenOriginal(x) {
             For <code><a href="#idl-def-MIDIInput" class="idlType"><code>MIDIInput</code></a></code>,
             this <em class="rfc2119" title="MUST">MUST</em> be <code>"input"</code>.-->
           </p>
-        </dd><dt id="widl-MIDIPort-version"><code>version</code> <span class="idlAttrType">DOMString</span>, readonly   , nullabl 型</dt><dd>
+        </dd><dt id="widl-MIDIPort-version"><code>version</code> <span class="idlAttrType">DOMString</span>, readonly   , nullable 型</dt><dd>
           <p>
             ポートのバージョンです。
             <!--The version of the port.--></p>
@@ -1370,14 +1370,14 @@ function OpenOriginal(x) {
         <ol>
           <li>
             <p>
-              <code>port</code>を<code><a href="#idl-def-MIDIPort" class="idlType"><code>MIDIPort</code></a></code>とします。
+              <code>port</code>を対象の<code><a href="#idl-def-MIDIPort" class="idlType"><code>MIDIPort</code></a></code>とします。
               <!--Let <code>port</code> be the <code><a href="#idl-def-MIDIPort" class="idlType"><code>MIDIPort</code></a></code>.-->
             </p>
           </li>
 
           <li>
             <p>
-              <code><a href="#idl-def-MIDIConnectionEvent" class="idlType"><code>MIDIConnectionEvent</code></a></code>を新たに作成し、<code>port</code>属性をこのポートとしたものを<code>event</code>とします。
+              <code><a href="#idl-def-MIDIConnectionEvent" class="idlType"><code>MIDIConnectionEvent</code></a></code>を新たに作成して<code>event</code>とし、<code>port</code>属性にportをセットします。
               <!--Let <code>event</code> be a newly constructed
               <code><a href="#idl-def-MIDIConnectionEvent" class="idlType"><code>MIDIConnectionEvent</code></a></code>, with the <code>port</code> 
               attribute set to the port.-->
@@ -1419,7 +1419,7 @@ function OpenOriginal(x) {
         <ol>
           <li>
             <p>
-              <code>port</code>を<a href="#idl-def-MIDIInput" class="idlType"><code>MIDIInput</code></a>とします。
+              <code>port</code>を対象の<a href="#idl-def-MIDIInput" class="idlType"><code>MIDIInput</code></a>とします。
               <!--Let <code>port</code> be the <code><a href="#idl-def-MIDIInput" class="idlType"><code>MIDIInput</code></a></code>.-->
             </p>
           </li>
@@ -1433,7 +1433,7 @@ function OpenOriginal(x) {
 
           <li>
             <p>
-              新たに<code><a href="#idl-def-MIDIMessageEvent" class="idlType"><code>MIDIMessageEvent</code></a></code>を作成し、<code>timestamp</code>属性はシステムがメッセージを受信した時刻、<code>data</code>属性は単一のMIDIメッセージを表すUint8ArrayのMIDIデータのバイト配列に設定して、<code>event</code>とします。
+              新たに<code><a href="#idl-def-MIDIMessageEvent" class="idlType"><code>MIDIMessageEvent</code></a></code>を作成して<code>event</code>とし、<code>timestamp</code>属性はシステムがメッセージを受信した時刻、<code>data</code>属性は単一のMIDIメッセージを表すUint8ArrayのMIDIデータのバイト配列に設定します。
               <!--Let <code>event</code> be a newly constructed
               <code><a href="#idl-def-MIDIMessageEvent" class="idlType"><code>MIDIMessageEvent</code></a></code>, with the <code>timestamp</code>
               attribute set to the time the message was received by the system, and
@@ -1583,7 +1583,7 @@ interface <span class="idlInterfaceID">MIDIConnectionEvent</span> : <span class=
   <p><em>このセクションは非基準情報です。
     <!--This section is non-normative.--></em></p>
   <p>
-    JavaScriptでの一般的なMIDIの使い方の例を次に示します。
+    JavaScriptでの一般的なMIDIの使い方の例を次に示します。<span class="annotate">(訳注：これらのコード中、midiAccessからMIDIポートを得る手順に仕様との不一致が見られ、まだ誤りが含まれていると思われます)</span>
     <!--The following are some examples of common MIDI usage in JavaScript.--></p>
 
       <section id="getting-access-to-the-midi-system">
@@ -1821,7 +1821,7 @@ navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );</pre>
           ユーザーのMIDIインターフェースの列挙を可能にする事は潜在的にフィンガープリンティングのターゲットになります(特定のMIDIインターフェースの接続によってユーザーを一意に識別するという意味です)。
           この文脈で注意するべきは、MIDI<i>インターフェース</i>の列挙である事です。つまり、MIDIインターフェースに接続されている、例えば、個別のサンプラーやシンセサイザーは
           それらのデバイスがUSB(USB-MIDIデバイスは典型的に自身のMIDIインターフェースを持ち、列挙されます)接続でない限り、列挙されません。
-          フィンガープリンティングの対象となるインターフェースはMIDI"ポート"と同義で、APIからMIDIインターフェースに対する個別のデバイスの名前、製造者、その内容の詳細は不明なid、が得られます(そこに接続されているデバイスではありません)。
+          フィンガープリンティングの対象となるインターフェースはMIDI"ポート"と同義で(そこに接続されているデバイスではありません)、APIからMIDIインターフェースに対する個別のデバイスの名前、製造者、その内容の詳細は不明なid、が得られます。
           <!--Allowing the enumeration of the user's MIDI interfaces is a potential target for fingerprinting (that is, uniquely identifying a user by the specific MIDI interfaces they have connected).  Note that in this context, what can be enumerated is the MIDI <i>interfaces</i> - not, for example, an individual sampler or synthesizer plugged into a MIDI interface, as these would not be enumerated, unless those devices are connected to the host computer with USB (USB-MIDI devices typically have their own MIDI interface, and would be enumerated).  The interfaces that could be fingerprinted are equivalent to MIDI "ports", and for each device the API will expose the name of the device, manufacturer, and opaque identifier of the MIDI interface (but not any attached devices).-->
           <p>
             大量のMIDIデバイスが接続されているシステムはあまり多くありません。
@@ -1873,7 +1873,7 @@ navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );</pre>
             そのためもしサンプラーに専用のマイクが接続されている場合(実際には一般的ではありませんが可能ではあります)、それは特定のデバイスが短時間の音を録音して、ユーザーの介在なしにネットワークにアップロードする事が可能かも知れません
             (デバイスからのオーディオストリームを流す事はできず、ほとんどのサンプラーのメモリー量には限界があります。またMIDIサンプルダンプSysExによるデータ転送は(7ビットへの変換が必要な)低速なものです。
             そのため、長時間に渡って盗聴されるような事は起こらないでしょう)。
-            より明確にフィンガープリンティングの方が問題であり、パッチ情報/保存されているサンプル/ユーザー設定により、システムを一意に識別する事が可能です(繰り返しますが、標準化された"全てのパッチを取得してハッシュする"方法はありませんので、これには多くのデバイス固有のコードが必要です)。
+            明らかにフィンガープリンティングの方が問題であり、パッチ情報/保存されているサンプル/ユーザー設定により、システムを一意に識別する事が可能です(繰り返しますが、"全てのパッチを取得してハッシュする"標準化された方法はありませんので、これには多くのデバイス固有のコードが必要です)。
             この事は、システムエクスルーシブ・メッセージがセキュリティ・カテゴリに分類されるべきものである事を示唆しています。
             <!--Sending and Receiving SysEx.  This is the biggest concern, because it would be possible to write code that looked for system-specific responses to sysex messages, which could identify the hardware available, and then use it to download data - e.g. samples stored in a sampler - or replace that data (erasing sample data or patches in the device), although both these scenarios would have to be coded for a particular device.  It is also possible that some samplers might enable a system exclusive message to start recording a sample - so if the sampler happened to have a dedicated microphone attached (uncommon in practice, but possible), it would be possible to write code specific to a particular device that could record a short sample of sound and then upload it to the network without further user intervention.  (You could not stream audio from the device, and most samplers have fairly limited memory, and MIDI Sample Dump sysex is a slow way to transfer data - it has to transcode into 7-bit - so it’s unlikely you could listen in for long periods.)  More explicit fingerprinting is a concern, as the patch information/stored samples/user configuration could uniquely identify the system (although again, this requires much device-specific code; there is not standardized “grab all patches and hash it” capability.)  This does suggest that system exclusive messages are in a security category of their own.-->
         </li></ol>
@@ -1906,7 +1906,7 @@ navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );</pre>
         ショート・メッセージの送信に関する懸案は全てのオーディオ出力に類似しています。ユーザーの情報を上書きしたりユーザーの情報を読み取る事はできず、ただ、音を出し、パッチを変更し、(稀な設定では)照明を点灯/消灯します。しかしこれは破壊的ではなく、永続するものではありません。
         <!--The additional concerns about sending short messages are analogous to any audio output - you cannot overwrite user information or expose use information, but you can make sounds happen, change patches, or (in rare configurations) toggle lights - but non-destructively, and not persistently. -->
       </p><p>
-        その一方、システムエクスルーシブは潜在的に制限の少ないものであるため、APIの中でより注意深く、ユーザーのセキュリティの留め金として、区別してSysExの要求をする事は良い考えです。<a href="#requestMIDIAccess">提案されているセキュリティモデル</a>ではMIDIデバイスへのアクセスの前にユーザーの許可を得る事は今のところ要求はされていませんが、明示的にユーザーエージェントが事前にユーザーの許可を求める事を許しています。しかし一方、システムエクスルーシブのサポートに関してはリクエストの中でそれを要求しなくてはならない事を詳細に定めています。
+        その一方、システムエクスルーシブは潜在的に制限の少ないものであるため、APIの中でより注意深く、ユーザーのセキュリティの留め金として、区別してSysExの要求をする事は良い考えです。<a href="#requestMIDIAccess">提案されているセキュリティモデル</a>ではユーザーエージェントがMIDIデバイスへのアクセスの前に明示的にユーザーの許可を求める事を許してはいますが、今の所、この許可を得るためにプロンプトを出す事は必須ではありません。しかしその一方、システムエクスルーシブのサポートに関してはリクエストの中でそれを要求しなくてはならない事を詳細に定めています。
         <!--System Exclusive, on the other hand, has a much less bounded potential, and it seems that distinguishing requests for SysEx separately in the API is a good idea, in order to more carefully provide user security hooks. The <a href="#requestMIDIAccess">suggested security model</a> explicitly allows user agents to require the user's approval before giving access to MIDI devices, although it is not currently required to prompt the user for this approval - but it also detailed that system exclusive support must be requested as part of that request.-->
       </p>
     </section>
