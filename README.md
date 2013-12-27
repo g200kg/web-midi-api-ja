@@ -13,5 +13,7 @@ GitHub : [https://github.com/g200kg/web-midi-api-ja](https://github.com/g200kg/w
 Tatsuya Shinyagaito @ g200kg
 誤りその他があればGitHubページ、下のサイト経由などで連絡をお願いいたします。
 [http://www.g200kg.com/](http://www.g200kg.com/)
-
-![](images/webmidiapi.png)
+  
+  
+##[W3C Unofficial] "みでゃっぴー" MIDIapply, the Web MIDI API mascot  
+![](images/midiappy.png)
