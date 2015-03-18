@@ -1,7 +1,7 @@
 
 #Web MIDI API (Working Draft) 日本語訳
 
-この文書は、W3Cの文書 "Web MIDI API」 W3C Working Draft 26 November 2013" の日本語訳です。
+この文書は、W3Cの文書 "Web MIDI API」 W3C Working Draft 3 March 2015" の日本語訳です。
 Web MIDI API の正式な文書は英語版のみであり、日本語訳には翻訳に起因する誤りが含まれている場合があります。
 正式な文書はW3Cのサイト : [http://www.w3.org/TR/webmidi/](http://www.w3.org/TR/webmidi/) にあります。
 
