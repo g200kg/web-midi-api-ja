@@ -571,7 +571,7 @@ function OpenOriginal(x) {
     <section property="dc:abstract" class="introductory" id="abstract"><h2 resource="#h-abstract" id="h-abstract"><span property="xhv:role" resource="xhv:heading">概要 <button onclick="OpenOriginal('abstract')">原文</button></span></h2>
       <p>
         シンセサイザー、キーボード等のコントローラー、ドラムマシンなど、
-        ユーザーエージェントはそのホストコンピュータやデバイスに接続された音楽機器を持っている場合があります。
+        ユーザーエージェントはそのホストコンピューターやデバイスに接続された音楽機器を持っている場合があります。
         広く採用されている、Musical Instrument Digital Interface (MIDI) プロトコルは電子楽器、
         コントローラー、コンピューター間で相互に通信と同期を可能にするものです。
         MIDIはオーディオ信号は送信しません:
@@ -1384,7 +1384,7 @@ function OpenOriginal(x) {
             </p>
 
           <table class="parameters"><tbody><tr><th>パラメータ</th><th>型</th><th>Null可</th><th>オプショナル</th><th>説明</th></tr><tr><td class="prmName">data</td><td class="prmType"><code>sequence&lt;<a class="internalDFN" href="#OctetDfn">octet</a>&gt;</code></td><td class="prmNullFalse"><span role="img" aria-label="False">✘</span></td><td class="prmOptFalse"><span role="img" aria-label="False">✘</span></td><td class="prmDesc">
-            キューに登録されるデータ。シーケンスの各エントリは1バイトのデータを表します。
+            キューに登録されるデータ。シーケンスの各エントリーは1バイトのデータを表します。
               </td></tr><tr><td class="prmName">timestamp</td><td class="prmType"><code>double</code></td><td class="prmNullFalse"><span role="img" aria-label="False">✘</span></td><td class="prmOptTrue"><span role="img" aria-label="True">✔</span></td><td class="prmDesc">
                 ポートにデータの送信を開始する時刻です (<a href="#DomHighResTimeStampDfn">DOMHighResTimeStamp</a> -
                 ドキュメントへのナビゲーション開始からの相対時間でミリ秒で表されます)。 もし<code>timestamp</code>が存在しない場合、
@@ -1428,7 +1428,7 @@ interface <span class="idlInterfaceID">MIDIMessageEvent</span> : <span class="id
     <section property="bibo:hasPart" resource="#midiconnectionevent-interface" typeof="bibo:Chapter" id="midiconnectionevent-interface">
       <!--OddPage--><h2 resource="#MIDIConnectionEvent" id="MIDIConnectionEvent"><span property="xhv:role" resource="xhv:heading"><span class="secno">8. </span><a class="idlType" href="#idl-def-MIDIConnectionEvent"><code>MIDIConnectionEvent</code></a> インターフェース</span> <button onclick="OpenOriginal('MIDIConnectionEvent')">原文</button></h2>
       <p>
-        新しいポートが使用可能になった時、(例えばMIDIデバイスが最初にコンピュータに接続された時)、
+        新しいポートが使用可能になった時、(例えばMIDIデバイスが最初にコンピューターに接続された時)、
         以前使用可能だったポートが使用不能になった時、または再度使用可能になった時、
         (例えばMIDIインターフェースが切断され、また接続された時)、
         このインターフェースを実装したイベントオブジェクトがMIDIAccessのonstatechangeハンドラーに渡されます。
@@ -1757,7 +1757,7 @@ navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );</pre>
             (MIDIは何十億ドルもの規模の音楽制作産業で使われているプロトコルであり、
             Garagebandのようなコンシューマー・アプリケーションだけでなく、
             プロ/プロシューマー向けのオーディオ/メディアアプリケーションで使われる、
-            コンピュータに接続するためのツマミやボタンを持った物理的なコントローラーが多数存在します)
+            コンピューターに接続するためのツマミやボタンを持った物理的なコントローラーが多数存在します)
           </li><li>ショート・メッセージの送信。
             送信に関しては、魅力として言えば、かなり少なくなります。
             出力デバイスにハードウェアシンセサイザーのようなものを接続すると言うシナリオは現在のマーケットではそれほど一般的ではありません。
@@ -1771,7 +1771,7 @@ navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );</pre>
             ファームウェア・ダウンロードなどにシステムエクスクルーシブを使用しており、
             それはWeb MIDIのシナリオとしても強く要求される事です。 デバイスによってはSysExを直接制御プロトコルとして使用します。
             それは多くのデータを1つの"メッセージ"にパックできるため、
-            多くのデバイスはSysExをパッチや設定データの保存/読み込みのための安価なコンピュータ・ストレージとして使用します。
+            多くのデバイスはSysExをパッチや設定データの保存/読み込みのための安価なコンピューター・ストレージとして使用します。
             ハードウェアに対してWeb MIDIを使って、Webベースの設定やプログラミング・インターフェースを提供する事に強い興味を持っている
             メジャーな音楽ハードウェア生産者もいます。
             簡単に言えば、SysExを使えなくすると、ハイエンドのシナリオが使えなくなるだけではないという事です。
