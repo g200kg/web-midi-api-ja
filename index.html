@@ -571,7 +571,7 @@ function OpenOriginal(x) {
     <section property="dc:abstract" class="introductory" id="abstract"><h2 resource="#h-abstract" id="h-abstract"><span property="xhv:role" resource="xhv:heading">概要 <button onclick="OpenOriginal('abstract')">原文</button></span></h2>
       <p>
         シンセサイザー、キーボード等のコントローラー、ドラムマシンなど、
-        ユーザーエージェントはそのホストコンピュータやデバイスに接続された音楽機器を持っている場合があります。
+        ユーザーエージェントはそのホストコンピューターやデバイスに接続された音楽機器を持っている場合があります。
         広く採用されている、Musical Instrument Digital Interface (MIDI) プロトコルは電子楽器、
         コントローラー、コンピューター間で相互に通信と同期を可能にするものです。
         MIDIはオーディオ信号は送信しません:
@@ -934,7 +934,7 @@ function OpenOriginal(x) {
           <p>新しいポートが接続された、あるいは既存のポートのstate属性が変化した時に呼ばれるハンドラーです。
           </p>
           <p>このイベントハンドラーは、<code><a href="#event-midiaccess-statechange">MIDIConnectionEvent</a></code>型に対応し、
-            <code><a class="idlType" href="#idl-def-MIDIAccess"><code>MIDIAccess</code></a></code>ンターフェースを実装した全てのオブジェクトでサポートされなくてはなりません(<em title="MUST" class="rfc2119">MUST</em>)。
+            <code><a class="idlType" href="#idl-def-MIDIAccess"><code>MIDIAccess</code></a></code>インターフェースを実装した全てのオブジェクトでサポートされなくてはなりません(<em title="MUST" class="rfc2119">MUST</em>)。
           </p>
           <p id="event-midiaccess-statechange">
             ユーザーエージェントは、これまで有効でなかったMIDIポートが有効になった時、あるいは既存のポートのstate属性が変化した時にはいつでも、
@@ -1053,7 +1053,7 @@ function OpenOriginal(x) {
             <code><a href="#idl-def-MIDIPort">MIDIPort</a></code>に対応するMIDIデバイスを
             明示的に使用不能にします(この後状態は"open"から"connected"になります)。
             このメソッドの呼び出しが成功すると
-            (新しいハンドラーの設定による暗黙的なopne()にかかわらず)MIDIメッセージはMIDI入力ポートのMIDIMessageEventハンドラーに
+            (新しいハンドラーの設定による暗黙的なopen()にかかわらず)MIDIメッセージはMIDI入力ポートのMIDIMessageEventハンドラーに
             もう伝達されなく事に注意してください。
           </p>
           <p>下層の実装はこの呼び出しに対して何もする必要がないかも知れません。
@@ -1312,7 +1312,7 @@ function OpenOriginal(x) {
           <li>
             <p>
               もし<code><a class="idlType" href="#idl-def-MIDIAccess"><code>MIDIAccess</code></a></code>
-              がシステムエクスルーシブを許可されておらず、そのメッセージがシステムエクスクルーシブの場合はこの手順を中断します。
+              がシステムエクスクルーシブを許可されておらず、そのメッセージがシステムエクスクルーシブの場合はこの手順を中断します。
             </p>
           </li>
 
@@ -1384,7 +1384,7 @@ function OpenOriginal(x) {
             </p>
 
           <table class="parameters"><tbody><tr><th>パラメータ</th><th>型</th><th>Null可</th><th>オプショナル</th><th>説明</th></tr><tr><td class="prmName">data</td><td class="prmType"><code>sequence&lt;<a class="internalDFN" href="#OctetDfn">octet</a>&gt;</code></td><td class="prmNullFalse"><span role="img" aria-label="False">✘</span></td><td class="prmOptFalse"><span role="img" aria-label="False">✘</span></td><td class="prmDesc">
-            キューに登録されるデータ。シーケンスの各エントリは1バイトのデータを表します。
+            キューに登録されるデータ。シーケンスの各エントリーは1バイトのデータを表します。
               </td></tr><tr><td class="prmName">timestamp</td><td class="prmType"><code>double</code></td><td class="prmNullFalse"><span role="img" aria-label="False">✘</span></td><td class="prmOptTrue"><span role="img" aria-label="True">✔</span></td><td class="prmDesc">
                 ポートにデータの送信を開始する時刻です (<a href="#DomHighResTimeStampDfn">DOMHighResTimeStamp</a> -
                 ドキュメントへのナビゲーション開始からの相対時間でミリ秒で表されます)。 もし<code>timestamp</code>が存在しない場合、
@@ -1428,10 +1428,10 @@ interface <span class="idlInterfaceID">MIDIMessageEvent</span> : <span class="id
     <section property="bibo:hasPart" resource="#midiconnectionevent-interface" typeof="bibo:Chapter" id="midiconnectionevent-interface">
       <!--OddPage--><h2 resource="#MIDIConnectionEvent" id="MIDIConnectionEvent"><span property="xhv:role" resource="xhv:heading"><span class="secno">8. </span><a class="idlType" href="#idl-def-MIDIConnectionEvent"><code>MIDIConnectionEvent</code></a> インターフェース</span> <button onclick="OpenOriginal('MIDIConnectionEvent')">原文</button></h2>
       <p>
-        新しいポートが使用可能になった時、(例えばMIDIデバイスが最初にコンピュータに接続された時)、
+        新しいポートが使用可能になった時、(例えばMIDIデバイスが最初にコンピューターに接続された時)、
         以前使用可能だったポートが使用不能になった時、または再度使用可能になった時、
         (例えばMIDIインターフェースが切断され、また接続された時)、
-        このインターフェースを実装したイベントオブジェクトがMIDIAccessのonstatechageハンドラーに渡されます。
+        このインターフェースを実装したイベントオブジェクトがMIDIAccessのonstatechangeハンドラーに渡されます。
         また(もしあれば)そのポートを参照する<code><a href="#idl-def-MIDIPort">MIDIPort</a></code>のonstatechangeハンドラー
         にも渡されます。
         </p>
@@ -1736,7 +1736,7 @@ navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );</pre>
             それを使ってデータ、例えばサンプラーに保存されているサンプルをダウンロードする事ができ、
             あるいはそのデータを入れ替える(サンプルやデバイスのパッチを消去する)事も可能です
             (とは言え、これらのシナリオは特定の機器に対するコードを書く必要があります)。
-            また、幾つかのサンプラーはシステムエクスルーシブ・メッセージでサンプルの録音の開始が可能です。
+            また、幾つかのサンプラーはシステムエクスクルーシブ・メッセージでサンプルの録音の開始が可能です。
             そのためもしサンプラーに専用のマイクが接続されている場合(実際には一般的ではありませんが可能ではあります)、
             それは特定のデバイスが短時間の音を録音して、ユーザーの介在なしにネットワークにアップロードする事が可能かも知れません
             (デバイスからのオーディオストリームを流す事はできず、ほとんどのサンプラーのメモリー量には限界があります。
@@ -1746,7 +1746,7 @@ navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );</pre>
             システムを一意に識別する事が可能です
             (繰り返しますが、"全てのパッチを取得してハッシュする"標準化された方法はありませんので、
             これには多くのデバイス固有のコードが必要です)。
-            この事は、システムエクスルーシブ・メッセージがセキュリティ・カテゴリに分類されるべきものである事を示唆しています。
+            この事は、システムエクスクルーシブ・メッセージがセキュリティ・カテゴリに分類されるべきものである事を示唆しています。
         </li></ol>
       <p>これらの機能に対して、MIDIによってどんなシナリオが可能になるのかを確認する事も有用です：
         </p><ol>
@@ -1757,7 +1757,7 @@ navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );</pre>
             (MIDIは何十億ドルもの規模の音楽制作産業で使われているプロトコルであり、
             Garagebandのようなコンシューマー・アプリケーションだけでなく、
             プロ/プロシューマー向けのオーディオ/メディアアプリケーションで使われる、
-            コンピュータに接続するためのツマミやボタンを持った物理的なコントローラーが多数存在します)
+            コンピューターに接続するためのツマミやボタンを持った物理的なコントローラーが多数存在します)
           </li><li>ショート・メッセージの送信。
             送信に関しては、魅力として言えば、かなり少なくなります。
             出力デバイスにハードウェアシンセサイザーのようなものを接続すると言うシナリオは現在のマーケットではそれほど一般的ではありません。
@@ -1767,11 +1767,11 @@ navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );</pre>
             ボタンの点灯/消灯や色の変化を行う事ができます。ほとんど全てのDJコントローラーも同様です。
           </li><li>SysExの送受信。 明らかにハイエンド・ハードウェア機器での高度な通信では、SysExが必要になります。
             残念ながら、幾つかの共通MIDIコマンド(例えば、一般的なスタート/ストップ/巻き戻し/早送りコマンドであるMIDIマシンコントロールなど)
-            もシステムエクスルーシブ・メッセージとして送られます。 そして多くのデバイスではプログラムパッチ、高度なコントローラー・メッセージ、
-            ファームウェア・ダウンロードなどにシステムエクスルーシブを使用しており、
+            もシステムエクスクルーシブ・メッセージとして送られます。 そして多くのデバイスではプログラムパッチ、高度なコントローラー・メッセージ、
+            ファームウェア・ダウンロードなどにシステムエクスクルーシブを使用しており、
             それはWeb MIDIのシナリオとしても強く要求される事です。 デバイスによってはSysExを直接制御プロトコルとして使用します。
             それは多くのデータを1つの"メッセージ"にパックできるため、
-            多くのデバイスはSysExをパッチや設定データの保存/読み込みのための安価なコンピュータ・ストレージとして使用します。
+            多くのデバイスはSysExをパッチや設定データの保存/読み込みのための安価なコンピューター・ストレージとして使用します。
             ハードウェアに対してWeb MIDIを使って、Webベースの設定やプログラミング・インターフェースを提供する事に強い興味を持っている
             メジャーな音楽ハードウェア生産者もいます。
             簡単に言えば、SysExを使えなくすると、ハイエンドのシナリオが使えなくなるだけではないという事です。
@@ -1786,12 +1786,12 @@ navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );</pre>
       </p><p>ショート・メッセージの送信に関する懸案は全てのオーディオ出力に類似しています。
         ユーザーの情報を上書きしたりユーザーの情報を読み取る事はできず、ただ、音を出し、パッチを変更し、
         (稀な設定では)照明を点灯/消灯します。しかしこれは破壊的ではなく、永続するものではありません。
-      </p><p>その一方、システムエクスルーシブは潜在的に制限の少ないものであるため、APIの中でより注意深く、
+      </p><p>その一方、システムエクスクルーシブは潜在的に制限の少ないものであるため、APIの中でより注意深く、
         ユーザーのセキュリティの留め金として、区別してSysExの要求をする事は良い考えです。
         <a href="#requestMIDIAccess">提案されているセキュリティモデル</a>ではユーザーエージェントがMIDIデバイスへのアクセスの前に明示的に
         ユーザーの許可を求める事を許してはいますが、
         今の所、この許可を得るためにプロンプトを出す事は必須ではありません。
-        しかしその一方、システムエクスルーシブのサポートに関してはリクエストの中でそれを要求しなくてはならない事を詳細に定めています。
+        しかしその一方、システムエクスクルーシブのサポートに関してはリクエストの中でそれを要求しなくてはならない事を詳細に定めています。
       </p>
     </section>
 
