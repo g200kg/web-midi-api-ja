@@ -444,7 +444,7 @@ function OpenOriginal(x) {
       <p>Web MIDI APIの正式な文書は英語版のみであり、日本語訳には翻訳に起因する誤りが含まれている場合があります。<br/>
         正式な文書は<a href="http://www.w3.org/TR/webmidi/">http://www.w3.org/TR/webmidi/</a>にあります。<br/>
       </p>
-      <p>翻訳元の文書はまだワーキング・ドラフト(Working Draft)です。現状ではまだ説明が不足している部分があったり、今後も頻繁に更新される可能性がある事に注意してください。
+      <p>翻訳元の文書はまだワーキングドラフト(Working Draft)です。現状ではまだ説明が不足している部分があったり、今後も頻繁に更新される可能性がある事に注意してください。
       </p>
       <p><b class="annotate">注:</b> 現在ネイティブのWeb MIDI APIの実装が進んでいるのはChromeだけであり、それ以外の環境で動作させるには Polyfill(<a href="http://cwilso.github.io/WebMIDIAPIShim/">WebMIDIAPIShim</a>)と<a href="http://jazz-soft.net/doc/Jazz-Plugin/">JazzPlugin</a>が必要になります。
       </p>
@@ -575,7 +575,7 @@ function OpenOriginal(x) {
         広く採用されている、Musical Instrument Digital Interface (MIDI) プロトコルは電子楽器、
         コントローラー、コンピューター間で相互に通信と同期を可能にするものです。
         MIDIはオーディオ信号は送信しません:
-        その代わりに音符に関するイベントメッセージ、音量やビブラートやパンニングなどのパラメータのコントローラー信号、
+        その代わりに音符に関するイベントメッセージ、音量やビブラートやパンニングなどのパラメーターのコントローラー信号、
         キューやテンポを合わせるためのクロック、あるいはそのシステム固有の (例えばリモートに保存されているシンセサイザー固有のパッチデータなど)
         通信を行います。
         このプロトコルは照明装置や特殊効果の制御を行うショーコントロールのような、音楽以外での分野でも標準となっています。
@@ -589,7 +589,7 @@ function OpenOriginal(x) {
         これはMIDI入力と出力インターフェースのメカニズムに触れる事ができ、
         MIDIメッセージをその動作の意味を認識する事なく、送信および受信するという実用的な側面のために設計されています
         (例えば、"20Hzでビブラートを掛ける"や"G#7の和音を演奏する"と言うような、
-        コントローラーの値が変わった事やG#7の和音を演奏した時の一組のノートオン・メッセージという以上の意味を持ちません)。
+        コントローラーの値が変わった事やG#7の和音を演奏した時の一組のノートオンメッセージという以上の意味を持ちません)。
       </p>
       <p>
         ユーザーの一部では、"MIDI"は、スタンダードMIDIファイルおよびジェネラルMIDIと同義語として使われています。
@@ -613,7 +613,7 @@ function OpenOriginal(x) {
             http://www.w3.org/TR/にある、<a href="http://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a>から見つけることができます。</em>
         </p>
         <p>
-          この文書は<a href="http://www.w3.org/2011/audio/">Audio Working Group</a>によって、ワーキング・ドラフトとして公開されました。
+          この文書は<a href="http://www.w3.org/2011/audio/">Audio Working Group</a>によって、ワーキングドラフトとして公開されました。
           この文書は<abbr title="World Wide Web Consortium">W3C</abbr> Recommendationとなることを意図しています。
            この文書にコメントしたい場合は以下で受け付けます。
             <a href="mailto:public-audio@w3.org">public-audio@w3.org</a>
@@ -622,7 +622,7 @@ function OpenOriginal(x) {
             どんなコメントでも歓迎します。
         </p>
           <p>
-            ワーキング・ドラフトとしての公開は<abbr title="World Wide Web Consortium">W3C</abbr>メンバーによる承認を意味するものではありません。 これは草案文書であり、いつでも他の文書によって改訂、置き換えあるいは廃止される可能性があります。
+            ワーキングドラフトとしての公開は<abbr title="World Wide Web Consortium">W3C</abbr>メンバーによる承認を意味するものではありません。 これは草案文書であり、いつでも他の文書によって改訂、置き換えあるいは廃止される可能性があります。
              この文書を作業中のもの以外として引用する事は不適切です。
           </p>
         <p>
@@ -636,7 +636,7 @@ function OpenOriginal(x) {
             この文書は<a id="w3c_process_revision" href="http://www.w3.org/2014/Process-20140801/">2014年8月1日 <abbr title="World Wide Web Consortium">W3C</abbr> 文書管理方法</a>によって管理されます。
           </p>
 
-</section><section id="toc"><h2 resource="#h-toc" id="h-toc" class="introductory"><span property="xhv:role" resource="xhv:heading">目次</span> <button onclick="OpenOriginal('toc')">原文</button></h2><ul id="respecContents" role="directory" class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>序文</a></li><li class="tocline"><a class="tocxref" href="#conformance"><span class="secno">2. </span>準拠</a></li><li class="tocline"><a class="tocxref" href="#terminology"><span class="secno">3. </span>用語</a></li><li class="tocline"><a class="tocxref" href="#obtaining-access-to-midi-devices"><span class="secno">4. </span>MIDIデバイスへのアクセスの取得</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#requestmidiaccess"><span class="secno">4.1 </span>requestMIDIAccess()</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#methods"><span class="secno">4.1.1 </span>メソッド</a></li></ul></li><li class="tocline"><a class="tocxref" href="#midioptions-dictionary"><span class="secno">4.2 </span><span class="formerLink"><code>MIDIOptions</code></span> ディクショナリ</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#dictionary-midioptions-members"><span class="secno">4.2.1 </span>ディクショナリ <span class="formerLink"><code>MIDIOptions</code></span> メンバー</a></li></ul></li><li class="tocline"><a class="tocxref" href="#midiinputmap-interface"><span class="secno">4.3 </span><span class="formerLink"><code>MIDIInputMap</code></span> インターフェース</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#maplike"><span class="secno">4.3.1 </span>マップライク</a></li></ul></li><li class="tocline"><a class="tocxref" href="#midioutputmap-interface"><span class="secno">4.4 </span><span class="formerLink"><code>MIDIOutputMap</code></span> インターフェース</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#maplike-1"><span class="secno">4.4.1 </span>マップライク</a></li></ul></li><li class="tocline"><a class="tocxref" href="#midisuccesscallback"><span class="secno">4.5 </span><span class="formerLink"><code>MIDISuccessCallback</code></span></a><ul class="toc"><li class="tocline"><a class="tocxref" href="#callback-midisuccesscallback-parameters"><span class="secno">4.5.1 </span>コールバック <span class="formerLink"><code>MIDISuccessCallback</code></span> パラメータ</a></li></ul></li></ul></li><li class="tocline"><a class="tocxref" href="#midiaccess-interface"><span class="secno">5. </span><span class="formerLink"><code>MIDIAccess</code></span> インターフェース</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#attributes"><span class="secno">5.1 </span>属性</a></li></ul></li><li class="tocline"><a class="tocxref" href="#midiport-interface"><span class="secno">6. </span><span class="formerLink"><code>MIDIPort</code></span> インターフェース</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#attributes-1"><span class="secno">6.1 </span>属性</a></li><li class="tocline"><a class="tocxref" href="#methods-1"><span class="secno">6.2 </span>メソッド</a></li><li class="tocline"><a class="tocxref" href="#midiinput-interface"><span class="secno">6.3 </span><span class="formerLink"><code>MIDIInput</code></span> インターフェース</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#attributes-2"><span class="secno">6.3.1 </span>属性</a></li></ul></li><li class="tocline"><a class="tocxref" href="#midioutput-interface"><span class="secno">6.4 </span><span class="formerLink"><code>MIDIOutput</code></span> インターフェース</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#methods-2"><span class="secno">6.4.1 </span>メソッド</a></li></ul></li></ul></li><li class="tocline"><a class="tocxref" href="#midimessageevent-interface"><span class="secno">7. </span><span class="formerLink"><code>MIDIMessageEvent</code></span> インターフェース</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#attributes-3"><span class="secno">7.1 </span>属性</a></li><li class="tocline"><a class="tocxref" href="#midimessageeventinit-interface"><span class="secno">7.2 </span><span class="formerLink"><code>MIDIMessageEventInit</code></span> インターフェース</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#dictionary-midimessageeventinit-members"><span class="secno">7.2.1 </span>ディクショナリ <span class="formerLink"><code>MIDIMessageEventInit</code></span> メンバー</a></li></ul></li></ul></li><li class="tocline"><a class="tocxref" href="#midiconnectionevent-interface"><span class="secno">8. </span><span class="formerLink"><code>MIDIConnectionEvent</code></span> インターフェース</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#attributes-4"><span class="secno">8.1 </span>属性</a></li><li class="tocline"><a class="tocxref" href="#midiconnectioneventinit-interface"><span class="secno">8.2 </span><span class="formerLink"><code>MIDIConnectionEventInit</code></span> インターフェース</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#dictionary-midiconnectioneventinit-members"><span class="secno">8.2.1 </span>ディクショナリ <span class="formerLink"><code>MIDIConnectionEventInit</code></span> メンバー</a></li></ul></li></ul></li><li class="tocline"><a class="tocxref" href="#examples-of-web-midi-api-usage-in-javascript"><span class="secno">9. </span>JavaScriptでのWeb MIDI API 使用例</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#getting-access-to-the-midi-system"><span class="secno">9.1 </span>MIDIシステムへのアクセスの取得</a></li><li class="tocline"><a class="tocxref" href="#requesting-access-to-the-midi-system-with-system-exclusive-support"><span class="secno">9.2 </span>システムエクスクルーシブ・サポートを伴ったMIDIシステムへのアクセスの取得</a></li><li class="tocline"><a class="tocxref" href="#listing-inputs-and-outputs"><span class="secno">9.3 </span>入力および出力のリスティング</a></li><li class="tocline"><a class="tocxref" href="#handling-midi-input"><span class="secno">9.4 </span>MIDI入力の扱い方</a></li><li class="tocline"><a class="tocxref" href="#sending-midi-messages-to-an-output-device"><span class="secno">9.5 </span>出力デバイスへのMIDIメッセージの送信</a></li><li class="tocline"><a class="tocxref" href="#a-simple-loopback"><span class="secno">9.6 </span>単純なループバック</a></li><li class="tocline"><a class="tocxref" href="#a-simple-monophonic-sine-wave-midi-synthesizer"><span class="secno">9.7 </span>単純なモノフォニック・サイン波MIDIシンセサイザー</a></li></ul></li><li class="tocline"><a class="tocxref" href="#security-and-privacy-considerations-of-midi"><span class="secno">10. </span>MIDIのセキュリティとプライバシーに関する考察</a></li><li class="tocline"><a class="tocxref" href="#references"><span class="secno">A. </span>リファレンス</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><span class="secno">A.1 </span>基準リファレンス</a></li></ul></li></ul></section>
+</section><section id="toc"><h2 resource="#h-toc" id="h-toc" class="introductory"><span property="xhv:role" resource="xhv:heading">目次</span> <button onclick="OpenOriginal('toc')">原文</button></h2><ul id="respecContents" role="directory" class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>序文</a></li><li class="tocline"><a class="tocxref" href="#conformance"><span class="secno">2. </span>準拠</a></li><li class="tocline"><a class="tocxref" href="#terminology"><span class="secno">3. </span>用語</a></li><li class="tocline"><a class="tocxref" href="#obtaining-access-to-midi-devices"><span class="secno">4. </span>MIDIデバイスへのアクセスの取得</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#requestmidiaccess"><span class="secno">4.1 </span>requestMIDIAccess()</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#methods"><span class="secno">4.1.1 </span>メソッド</a></li></ul></li><li class="tocline"><a class="tocxref" href="#midioptions-dictionary"><span class="secno">4.2 </span><span class="formerLink"><code>MIDIOptions</code></span> ディクショナリ</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#dictionary-midioptions-members"><span class="secno">4.2.1 </span>ディクショナリ <span class="formerLink"><code>MIDIOptions</code></span> メンバー</a></li></ul></li><li class="tocline"><a class="tocxref" href="#midiinputmap-interface"><span class="secno">4.3 </span><span class="formerLink"><code>MIDIInputMap</code></span> インターフェース</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#maplike"><span class="secno">4.3.1 </span>マップライク</a></li></ul></li><li class="tocline"><a class="tocxref" href="#midioutputmap-interface"><span class="secno">4.4 </span><span class="formerLink"><code>MIDIOutputMap</code></span> インターフェース</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#maplike-1"><span class="secno">4.4.1 </span>マップライク</a></li></ul></li><li class="tocline"><a class="tocxref" href="#midisuccesscallback"><span class="secno">4.5 </span><span class="formerLink"><code>MIDISuccessCallback</code></span></a><ul class="toc"><li class="tocline"><a class="tocxref" href="#callback-midisuccesscallback-parameters"><span class="secno">4.5.1 </span>コールバック <span class="formerLink"><code>MIDISuccessCallback</code></span> パラメーター</a></li></ul></li></ul></li><li class="tocline"><a class="tocxref" href="#midiaccess-interface"><span class="secno">5. </span><span class="formerLink"><code>MIDIAccess</code></span> インターフェース</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#attributes"><span class="secno">5.1 </span>属性</a></li></ul></li><li class="tocline"><a class="tocxref" href="#midiport-interface"><span class="secno">6. </span><span class="formerLink"><code>MIDIPort</code></span> インターフェース</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#attributes-1"><span class="secno">6.1 </span>属性</a></li><li class="tocline"><a class="tocxref" href="#methods-1"><span class="secno">6.2 </span>メソッド</a></li><li class="tocline"><a class="tocxref" href="#midiinput-interface"><span class="secno">6.3 </span><span class="formerLink"><code>MIDIInput</code></span> インターフェース</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#attributes-2"><span class="secno">6.3.1 </span>属性</a></li></ul></li><li class="tocline"><a class="tocxref" href="#midioutput-interface"><span class="secno">6.4 </span><span class="formerLink"><code>MIDIOutput</code></span> インターフェース</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#methods-2"><span class="secno">6.4.1 </span>メソッド</a></li></ul></li></ul></li><li class="tocline"><a class="tocxref" href="#midimessageevent-interface"><span class="secno">7. </span><span class="formerLink"><code>MIDIMessageEvent</code></span> インターフェース</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#attributes-3"><span class="secno">7.1 </span>属性</a></li><li class="tocline"><a class="tocxref" href="#midimessageeventinit-interface"><span class="secno">7.2 </span><span class="formerLink"><code>MIDIMessageEventInit</code></span> インターフェース</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#dictionary-midimessageeventinit-members"><span class="secno">7.2.1 </span>ディクショナリ <span class="formerLink"><code>MIDIMessageEventInit</code></span> メンバー</a></li></ul></li></ul></li><li class="tocline"><a class="tocxref" href="#midiconnectionevent-interface"><span class="secno">8. </span><span class="formerLink"><code>MIDIConnectionEvent</code></span> インターフェース</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#attributes-4"><span class="secno">8.1 </span>属性</a></li><li class="tocline"><a class="tocxref" href="#midiconnectioneventinit-interface"><span class="secno">8.2 </span><span class="formerLink"><code>MIDIConnectionEventInit</code></span> インターフェース</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#dictionary-midiconnectioneventinit-members"><span class="secno">8.2.1 </span>ディクショナリ <span class="formerLink"><code>MIDIConnectionEventInit</code></span> メンバー</a></li></ul></li></ul></li><li class="tocline"><a class="tocxref" href="#examples-of-web-midi-api-usage-in-javascript"><span class="secno">9. </span>JavaScriptでのWeb MIDI API 使用例</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#getting-access-to-the-midi-system"><span class="secno">9.1 </span>MIDIシステムへのアクセスの取得</a></li><li class="tocline"><a class="tocxref" href="#requesting-access-to-the-midi-system-with-system-exclusive-support"><span class="secno">9.2 </span>システムエクスクルーシブサポートを伴ったMIDIシステムへのアクセスの取得</a></li><li class="tocline"><a class="tocxref" href="#listing-inputs-and-outputs"><span class="secno">9.3 </span>入力および出力のリスティング</a></li><li class="tocline"><a class="tocxref" href="#handling-midi-input"><span class="secno">9.4 </span>MIDI入力の扱い方</a></li><li class="tocline"><a class="tocxref" href="#sending-midi-messages-to-an-output-device"><span class="secno">9.5 </span>出力デバイスへのMIDIメッセージの送信</a></li><li class="tocline"><a class="tocxref" href="#a-simple-loopback"><span class="secno">9.6 </span>単純なループバック</a></li><li class="tocline"><a class="tocxref" href="#a-simple-monophonic-sine-wave-midi-synthesizer"><span class="secno">9.7 </span>単純なモノフォニックサイン波MIDIシンセサイザー</a></li></ul></li><li class="tocline"><a class="tocxref" href="#security-and-privacy-considerations-of-midi"><span class="secno">10. </span>MIDIのセキュリティとプライバシーに関する考察</a></li><li class="tocline"><a class="tocxref" href="#references"><span class="secno">A. </span>リファレンス</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><span class="secno">A.1 </span>基準リファレンス</a></li></ul></li></ul></section>
     <section property="bibo:hasPart" resource="#introduction" typeof="bibo:Chapter" id="introduction" class="informative">
       <!--OddPage--><h2 resource="#h-introduction" id="h-introduction"><span property="xhv:role" resource="xhv:heading"><span class="secno">1. </span>序文</span> <button onclick="OpenOriginal('introduction')">原文</button></h2><p><em>このセクションは非基準情報です。</em></p>
       <p>
@@ -692,7 +692,7 @@ function OpenOriginal(x) {
         <dfn id="dfn-event-handlers"><a href="http://dev.w3.org/html5/spec/webappapis.html#event-handlers">
         イベントハンドラー</a></dfn>、
         <dfn id="dfn-event-handler-event-types"><a href="http://dev.w3.org/html5/spec/webappapis.html#event-handler-event-type">
-      イベントハンドラー・イベントタイプ</a></dfn> および対応する<a href="http://www.w3.org/html/wg/drafts/html/master/single-page.html#eventhandler">
+      イベントハンドラーイベントタイプ</a></dfn> および対応する<a href="http://www.w3.org/html/wg/drafts/html/master/single-page.html#eventhandler">
         <code>EventHandler</code></a> インターフェースは [<cite><a href="#bib-HTML5" class="bibref">HTML5</a></cite>]
         で定義されています。</p>
       <p>
@@ -718,8 +718,8 @@ function OpenOriginal(x) {
         <dfn id="dfn-midi">MIDI</dfn>, <dfn id="dfn-midi-device">MIDI デバイス</dfn>、
         <dfn id="dfn-midi-input-port">MIDI 入力ポート</dfn>, <dfn id="dfn-midi-output-port">MIDI 出力ポート</dfn>、
         <dfn id="dfn-midi-interface">MIDI インターフェース</dfn>, <dfn id="dfn-midi-message">MIDI メッセージ</dfn>、
-        <dfn id="dfn-midi-system-real-time-message">MIDI システム・リアルタイム・メッセージ</dfn>、
-        <dfn id="dfn-system-exclusive">システム・エクスクルーシブ</dfn> は [<cite><a href="#bib-MIDI" class="bibref">MIDI</a></cite>]
+        <dfn id="dfn-midi-system-real-time-message">MIDI システムリアルタイムメッセージ</dfn>、
+        <dfn id="dfn-system-exclusive">システムエクスクルーシブ</dfn> は [<cite><a href="#bib-MIDI" class="bibref">MIDI</a></cite>]
         で定義されています。
       </p><p>
         <dfn id="dfn-promise"><a href="http://dom.spec.whatwg.org/#promises">Promise</a></dfn> インターフェースは現在 <a href="http://dom.spec.whatwg.org/">the WHATWG DOM specification</a>で定義されています。
@@ -753,19 +753,19 @@ function OpenOriginal(x) {
               </p>
               <p>
                 ユーザーが拒否したり、あるいは別の理由で呼び出しが許可されていない場合、(もし設定されていれば)Promiseの
-                <var>rejectCallback</var>が<code>DOMException</code>パラメータと共に呼び出されます。
+                <var>rejectCallback</var>が<code>DOMException</code>パラメーターと共に呼び出されます。
               </p>
               <p>
                 <dfn id="dom-navigator-requestmidiaccess">
                 <code>requestMIDIAccess</code></dfn>メソッドが呼ばれた時、
-                ユーザーエージェントは以下の<dfn id="dfn-algorithm-to-request-midi-access">MIDIアクセス・リクエストアルゴリズム</dfn>
+                ユーザーエージェントは以下の<dfn id="dfn-algorithm-to-request-midi-access">MIDIアクセスリクエストアルゴリズム</dfn>
                 を実行しなくてはなりません
                 (<em title="MUST" class="rfc2119">MUST</em>)。：
               </p>
               <ol>
 
                 <li><p>
-                  新しいPromiseオブジェクト、<var>promise</var>を作成し、<var>resolver</var>をそれに結びついたリゾルバとします。
+                  新しいPromiseオブジェクト、<var>promise</var>を作成し、<var>resolver</var>をそれに結びついたリゾルバーとします。
                 </p></li>
                 <li><p>
                   <var>promise</var>を返し、以下のステップを非同期に実行します。
@@ -813,7 +813,7 @@ function OpenOriginal(x) {
                 </p></li>
               </ol>
 
-            <table class="parameters"><tbody><tr><th>パラメータ</th><th>型</th><th>Null可</th><th>オプショナル</th><th>説明</th></tr><tr><td class="prmName">options</td><td class="prmType"><code><a class="idlType" href="#idl-def-MIDIOptions"><code>MIDIOptions</code></a></code></td><td class="prmNullFalse"><span role="img" aria-label="False">✘</span></td><td class="prmOptTrue"><span role="img" aria-label="True">✔</span></td><td class="prmDesc"></td></tr></tbody></table><div><em>戻り値の型: </em><code>Promise&lt;<a class="idlType" href="#idl-def-MIDIAccess"><code>MIDIAccess</code></a>&gt;</code></div></dd></dl></section>
+            <table class="parameters"><tbody><tr><th>パラメーター</th><th>型</th><th>Null可</th><th>オプショナル</th><th>説明</th></tr><tr><td class="prmName">options</td><td class="prmType"><code><a class="idlType" href="#idl-def-MIDIOptions"><code>MIDIOptions</code></a></code></td><td class="prmNullFalse"><span role="img" aria-label="False">✘</span></td><td class="prmOptTrue"><span role="img" aria-label="True">✔</span></td><td class="prmDesc"></td></tr></tbody></table><div><em>戻り値の型: </em><code>Promise&lt;<a class="idlType" href="#idl-def-MIDIAccess"><code>MIDIAccess</code></a>&gt;</code></div></dd></dl></section>
       </section>
 
       <section property="bibo:hasPart" resource="#midioptions-dictionary" typeof="bibo:Chapter" id="midioptions-dictionary">
@@ -825,16 +825,16 @@ function OpenOriginal(x) {
 <span class="idlMember">    <span class="idlMemberType">boolean</span> <span class="idlMemberName"><a href="#widl-MIDIOptions-sysex">sysex</a></span>;</span>
 };</span></pre><section property="bibo:hasPart" resource="#dictionary-midioptions-members" typeof="bibo:Chapter" id="dictionary-midioptions-members"><h4 resource="#h-dictionary-midioptions-members" id="h-dictionary-midioptions-members"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.2.1 </span>ディクショナリ <a href="#idl-def-MIDIOptions" class="idlType"><code>MIDIOptions</code></a> メンバー</span> <button onclick="OpenOriginal('dictionary-midioptions-members')">原文</button></h4><dl class="dictionary-members"><dt id="widl-MIDIOptions-sysex"><code>sysex</code> <span class="idlMemberType">boolean</span>型</dt><dd>
             <p>このメンバーはその<a class="idlType" href="#idl-def-MIDIAccess"><code>MIDIAccess</code></a>オブジェクトによって
-              システムエクスクルーシブ・メッセージの送受信を行う事を要求、
+              システムエクスクルーシブメッセージの送受信を行う事を要求、
               または許可する事を表します。
               このメンバーがtrueに設定されたオプションが<code><a class="internalDFN" href="#dom-navigator-requestmidiaccess">requestMIDIAccess</a></code>に渡され、
               しかし、(ポリシーまたはユーザーアクションによって)、システムエクスクルーシブのサポートが否定された場合、
               アクセス要求は失敗し<code>"SecurityError"</code>エラーが発生します。
               もし、このサポートを要求しない(そして許可された)場合に、
-              ユーザーがシステムエクスクルーシブ・メッセージを送信しようとした時には例外が発生し、
-               そのポートでシステムエクスクルーシブ・メッセージを受信した時には全て無反応のままマスクされます。
+              ユーザーがシステムエクスクルーシブメッセージを送信しようとした時には例外が発生し、
+               そのポートでシステムエクスクルーシブメッセージを受信した時には全て無反応のままマスクされます。
              </p>
-            <p>resolveCallbackに渡されるパラメータの<code>options</code>では、
+            <p>resolveCallbackに渡されるパラメーターの<code>options</code>では、
                このメンバーはシステムエクスクルーシブがMIDIAccess上で許可されている事を表します。
              </p>
           </dd></dl></section>
@@ -900,7 +900,7 @@ function OpenOriginal(x) {
       <section property="bibo:hasPart" resource="#midisuccesscallback" typeof="bibo:Chapter" id="midisuccesscallback">
         <h3 resource="#h-midisuccesscallback" id="h-midisuccesscallback"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.5 </span><a class="idlType" href="#idl-def-MIDISuccessCallback"><code>MIDISuccessCallback</code></a></span> <button onclick="OpenOriginal('h-midisuccesscallback')">原文</button></h3>
 
-        <pre class="idl"><span class="idlCallback" id="idl-def-MIDISuccessCallback">callback <span class="idlCallbackID">MIDISuccessCallback</span> = <span class="idlCallbackType">void</span> (<span class="idlParam"><span class="idlParamType"><a class="idlType" href="#idl-def-MIDIAccess"><code>MIDIAccess</code></a></span> <span class="idlParamName">access</span></span>, <span class="idlParam"><span class="idlParamType"><a class="idlType" href="#idl-def-MIDIOptions"><code>MIDIOptions</code></a></span> <span class="idlParamName">options</span></span>);</span></pre><section property="bibo:hasPart" resource="#callback-midisuccesscallback-parameters" typeof="bibo:Chapter" id="callback-midisuccesscallback-parameters"><h4 resource="#h-callback-midisuccesscallback-parameters" id="h-callback-midisuccesscallback-parameters"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.5.1 </span>コールバック <a href="#idl-def-MIDISuccessCallback" class="idlType"><code>MIDISuccessCallback</code></a> パラメータ</span> <button onclick="OpenOriginal('h-callback-midisuccesscallback-parameters')">原文</button></h4>
+        <pre class="idl"><span class="idlCallback" id="idl-def-MIDISuccessCallback">callback <span class="idlCallbackID">MIDISuccessCallback</span> = <span class="idlCallbackType">void</span> (<span class="idlParam"><span class="idlParamType"><a class="idlType" href="#idl-def-MIDIAccess"><code>MIDIAccess</code></a></span> <span class="idlParamName">access</span></span>, <span class="idlParam"><span class="idlParamType"><a class="idlType" href="#idl-def-MIDIOptions"><code>MIDIOptions</code></a></span> <span class="idlParamName">options</span></span>);</span></pre><section property="bibo:hasPart" resource="#callback-midisuccesscallback-parameters" typeof="bibo:Chapter" id="callback-midisuccesscallback-parameters"><h4 resource="#h-callback-midisuccesscallback-parameters" id="h-callback-midisuccesscallback-parameters"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.5.1 </span>コールバック <a href="#idl-def-MIDISuccessCallback" class="idlType"><code>MIDISuccessCallback</code></a> パラメーター</span> <button onclick="OpenOriginal('h-callback-midisuccesscallback-parameters')">原文</button></h4>
           <dl class="callback-members"><dt id="widl-MIDISuccessCallback-access"><code>access</code> <span class="idlMemberType"><a class="idlType" href="#idl-def-MIDIAccess"><code>MIDIAccess</code></a>型</span></dt><dd>
             <p>
               スクリプトからユーザーのMIDIデバイスにアクセスするために作成された、<code><a class="idlType" href="#idl-def-MIDIAccess"><code>MIDIAccess</code></a></code>オブジェクトです。
@@ -911,7 +911,7 @@ function OpenOriginal(x) {
             それは1つのデバイスとして列挙されます。
           </p></dd><dt id="widl-MIDISuccessCallback-options"><code>options</code> <span class="idlMemberType"><a class="idlType" href="#idl-def-MIDIOptions"><code>MIDIOptions</code></a>型</span></dt><dd>
             <p>
-              このパラメータはこの<a class="idlType" href="#idl-def-MIDIAccess"><code>MIDIAccess</code></a>
+              このパラメーターはこの<a class="idlType" href="#idl-def-MIDIAccess"><code>MIDIAccess</code></a>
               オブジェクトで有効にするオプションを表します。
             </p>
           </dd></dl></section>
@@ -1079,7 +1079,7 @@ function OpenOriginal(x) {
           <ol>
             <li><p>
               新たにPromiseオブジェクト、<var>promise</var>を作成し、<var>resolver</var>を
-              対応するリゾルバとします。
+              対応するリゾルバーとします。
             </p></li>
             <li><p><var>promise</var>を返却し、次のステップを非同期に実行します。
             </p></li>
@@ -1127,7 +1127,7 @@ function OpenOriginal(x) {
               <var>error</var>を引数として呼び出します。
             </p></li>
           </ol>
-        <div><em>パラメータなし。</em></div><div><em>戻り値の型: </em><code>Promise&lt;<a class="idlType" href="#idl-def-MIDIPort"><code>MIDIPort</code></a>&gt;</code></div></dd><dt id="widl-MIDIPort-open-Promise-MIDIPort"><code>open</code></dt><dd>
+        <div><em>パラメーターなし。</em></div><div><em>戻り値の型: </em><code>Promise&lt;<a class="idlType" href="#idl-def-MIDIPort"><code>MIDIPort</code></a>&gt;</code></div></dd><dt id="widl-MIDIPort-open-Promise-MIDIPort"><code>open</code></dt><dd>
           <p>
             <a class="idlType" href="#idl-def-MIDIPort"><code>MIDIPort</code></a>に対応するMIDIデバイスを明示的に
             使用可能にします。
@@ -1172,7 +1172,7 @@ function OpenOriginal(x) {
           <ol>
             <li><p>
               新しいPromiseオブジェクト、<var>promise</var>を作成し、
-              結び付けられるリゾルバを<var>resolver</var>とします。</p></li>
+              結び付けられるリゾルバーを<var>resolver</var>とします。</p></li>
 
             <li><p>
               <var>promise</var>を返却し、次のステップを非同期的に実行します。</p></li>
@@ -1244,7 +1244,7 @@ function OpenOriginal(x) {
               <var>error</var>を引数として呼び出します。
             </p></li>
           </ol>
-        <div><em>パラメータなし。</em></div><div><em>戻り値の型: </em><code>Promise&lt;<a class="idlType" href="#idl-def-MIDIPort"><code>MIDIPort</code></a>&gt;</code></div></dd></dl></section>
+        <div><em>パラメーターなし。</em></div><div><em>戻り値の型: </em><code>Promise&lt;<a class="idlType" href="#idl-def-MIDIPort"><code>MIDIPort</code></a>&gt;</code></div></dd></dl></section>
 
       <p id="event-midiport-statechange">
         <code><a class="idlType" href="#idl-def-MIDIPort"><code>MIDIPort</code></a></code>に対応する
@@ -1333,8 +1333,8 @@ function OpenOriginal(x) {
             </p>
           </li>
         </ol>
-        <p>特に注意を要するのは、入力ストリームの他のメッセージの途中でMIDIシステム・リアルタイム・メッセージが発生した時です。
-          この場合、そのシステム・リアルタイム・メッセージは発生する度にディスパッチされ、通常のメッセージはそれが完結するまで
+        <p>特に注意を要するのは、入力ストリームの他のメッセージの途中でMIDIシステムリアルタイムメッセージが発生した時です。
+          この場合、そのシステムリアルタイムメッセージは発生する度にディスパッチされ、通常のメッセージはそれが完結するまで
           バッファされます (完結後ディスパッチされます)。
         </p>
 
@@ -1352,7 +1352,7 @@ function OpenOriginal(x) {
               実装はMIDIストリームが正常な状態に維持される事を保証する必要があり、もし出力ポートがsysexメッセージの途中にあった場合は
               sysexを終端するバイト(0xf7)が送信されなくてはなりません。
               </p>
-          <div><em>パラメータなし。</em></div><div><em>戻り値の型: </em><code>void</code></div></dd><dt id="widl-MIDIOutput-send-void-sequence-octet--data-double-timestamp"><code>send</code></dt><dd>
+          <div><em>パラメーターなし。</em></div><div><em>戻り値の型: </em><code>void</code></div></dd><dt id="widl-MIDIOutput-send-void-sequence-octet--data-double-timestamp"><code>send</code></dt><dd>
             <p>
               対応するMIDIポートのキューに送信するメッセージを登録します。
               実装は(もし必要なら)シーケンスの各メンバーを強制的にunsigned 8ビット整数にします。
@@ -1368,7 +1368,7 @@ function OpenOriginal(x) {
               例外が発生します。
             </p>
             <p>
-              もし<var>data</var>がシステムエクスクルーシブ・メッセージで、
+              もし<var>data</var>がシステムエクスクルーシブメッセージで、
               <code><a class="idlType" href="#idl-def-MIDIAccess"><code>MIDIAccess</code></a></code>
               がシステムエクスクルーシブへのアクセスが許可されていない場合、
               <code>InvalidAccessError</code>例外が発生します。
@@ -1383,7 +1383,7 @@ function OpenOriginal(x) {
               <a href="#midiport-open-algorithm">ポートのオープン</a>を非同期で試みます。
             </p>
 
-          <table class="parameters"><tbody><tr><th>パラメータ</th><th>型</th><th>Null可</th><th>オプショナル</th><th>説明</th></tr><tr><td class="prmName">data</td><td class="prmType"><code>sequence&lt;<a class="internalDFN" href="#OctetDfn">octet</a>&gt;</code></td><td class="prmNullFalse"><span role="img" aria-label="False">✘</span></td><td class="prmOptFalse"><span role="img" aria-label="False">✘</span></td><td class="prmDesc">
+          <table class="parameters"><tbody><tr><th>パラメーター</th><th>型</th><th>Null可</th><th>オプショナル</th><th>説明</th></tr><tr><td class="prmName">data</td><td class="prmType"><code>sequence&lt;<a class="internalDFN" href="#OctetDfn">octet</a>&gt;</code></td><td class="prmNullFalse"><span role="img" aria-label="False">✘</span></td><td class="prmOptFalse"><span role="img" aria-label="False">✘</span></td><td class="prmDesc">
             キューに登録されるデータ。シーケンスの各エントリーは1バイトのデータを表します。
               </td></tr><tr><td class="prmName">timestamp</td><td class="prmType"><code>double</code></td><td class="prmNullFalse"><span role="img" aria-label="False">✘</span></td><td class="prmOptTrue"><span role="img" aria-label="True">✔</span></td><td class="prmDesc">
                 ポートにデータの送信を開始する時刻です (<a href="#DomHighResTimeStampDfn">DOMHighResTimeStamp</a> -
@@ -1494,7 +1494,7 @@ navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );</pre>
       </section>
 
       <section property="bibo:hasPart" resource="#requesting-access-to-the-midi-system-with-system-exclusive-support" typeof="bibo:Chapter" id="requesting-access-to-the-midi-system-with-system-exclusive-support">
-        <h3 resource="#h-requesting-access-to-the-midi-system-with-system-exclusive-support" id="h-requesting-access-to-the-midi-system-with-system-exclusive-support"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.2 </span>システムエクスクルーシブ・サポートを伴ったMIDIシステムへのアクセスの取得</span> <button onclick="OpenOriginal('h-requesting-access-to-the-midi-system-with-system-exclusive-support')">原文</button></h3>
+        <h3 resource="#h-requesting-access-to-the-midi-system-with-system-exclusive-support" id="h-requesting-access-to-the-midi-system-with-system-exclusive-support"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.2 </span>システムエクスクルーシブサポートを伴ったMIDIシステムへのアクセスの取得</span> <button onclick="OpenOriginal('h-requesting-access-to-the-midi-system-with-system-exclusive-support')">原文</button></h3>
         <p>このサンプルはシステムエクスクルーシブの送受信を含めたMIDIシステムへのアクセス要求の方法を示しています。</p>
           <pre class="code es-code">var midi = null;  // // グローバルMIDIAccessオブジェクト
 
@@ -1547,7 +1547,7 @@ function startLoggingMIDIInput( midiAccess, indexOfPort ) {
 
       <section property="bibo:hasPart" resource="#sending-midi-messages-to-an-output-device" typeof="bibo:Chapter" id="sending-midi-messages-to-an-output-device">
         <h3 resource="#h-sending-midi-messages-to-an-output-device" id="h-sending-midi-messages-to-an-output-device"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.5 </span>出力デバイスへのMIDIメッセージの送信</span> <button onclick="OpenOriginal('h-sending-midi-messages-to-an-output-device')">原文</button></h3>
-        <p>このサンプルは中央Cのノートオン・メッセージを
+        <p>このサンプルは中央Cのノートオンメッセージを
           MIDIチャンネル1(MIDIチャンネルのインデックスは0から始まりますが一般的には1～16と表されます)に送信し、
           対応するノートオフメッセージを1秒後に送るようにキューに登録します。</p>
         <pre class="code es-code">function sendMiddleC( midiAccess, portID ) {
@@ -1561,7 +1561,7 @@ function startLoggingMIDIInput( midiAccess, indexOfPort ) {
 
       <section property="bibo:hasPart" resource="#a-simple-loopback" typeof="bibo:Chapter" id="a-simple-loopback">
         <h3 resource="#h-a-simple-loopback" id="h-a-simple-loopback"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.6 </span>単純なループバック</span> <button onclick="OpenOriginal('h-a-simple-loopback')">原文</button></h3>
-        <p>このサンプルは、システムエクスクルーシブ・メッセージを含め、1番目の入力ポートで受信したメッセージを1番目の出力ポートに出力します。</p>
+        <p>このサンプルは、システムエクスクルーシブメッセージを含め、1番目の入力ポートで受信したメッセージを1番目の出力ポートに出力します。</p>
         <pre class="code es-code">var midi = null;  // グローバル MIDIAccess オブジェクト
 var output = null;
 
@@ -1589,7 +1589,7 @@ navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );</pre>
       </section>
 
       <section property="bibo:hasPart" resource="#a-simple-monophonic-sine-wave-midi-synthesizer" typeof="bibo:Chapter" id="a-simple-monophonic-sine-wave-midi-synthesizer">
-        <h3 resource="#h-a-simple-monophonic-sine-wave-midi-synthesizer" id="h-a-simple-monophonic-sine-wave-midi-synthesizer"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.7 </span>単純なモノフォニック・サイン波MIDIシンセサイザー</span> <button onclick="OpenOriginal('h-a-simple-monophonic-sine-wave-midi-synthesizer')">原文</button></h3>
+        <h3 resource="#h-a-simple-monophonic-sine-wave-midi-synthesizer" id="h-a-simple-monophonic-sine-wave-midi-synthesizer"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.7 </span>単純なモノフォニックサイン波MIDIシンセサイザー</span> <button onclick="OpenOriginal('h-a-simple-monophonic-sine-wave-midi-synthesizer')">原文</button></h3>
         <p>
           このサンプルは全ての使用可能な入力ポートで受信したノートメッセージで、
           <a class="internalDFN" href="#WebAudio">Web Audio API</a>を使ったモノフォニックのサイン波オシレーターのエンベロープと周波数を制御し、
@@ -1712,22 +1712,22 @@ navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );</pre>
       </ol>
       <p>MIDIポートに対してできる事を簡単に分類すると：
         </p><ol>
-          <li>ショート・メッセージ(SysExを除く全てのメッセージ)の送信
-          </li><li>ショート・メッセージ(SysExを除く全てのメッセージ)の受信
+          <li>ショートメッセージ(SysExを除く全てのメッセージ)の送信
+          </li><li>ショートメッセージ(SysExを除く全てのメッセージ)の受信
           </li><li>SysExメッセージの送信。
             SysExメッセージは("Roland Jupiter-80シンセサイザーのパッチデータ"のような)
             他のデバイスには適用できないデバイス固有メッセージに加えて、
-            MIDIタイムコードおよびMIDIサンプルダンプ・スタンダードのような共通で認識されるものの両方を含みます。
+            MIDIタイムコードおよびMIDIサンプルダンプスタンダードのような共通で認識されるものの両方を含みます。
           </li><li>SysExメッセージの受信
         </li></ol>
       <p>そのそれぞれが持つインパクトは：
         </p><ol>
-          <li>ショート・メッセージの送信：
-            ノートオン/ノートオフ/コントローラー・メッセージは接続された機器や(MacやWindowsが)デフォルトで持っている仮想シンセサイザーから、
+          <li>ショートメッセージの送信：
+            ノートオン/ノートオフ/コントローラーメッセージは接続された機器や(MacやWindowsが)デフォルトで持っている仮想シンセサイザーから、
             音の再生を行います。
             これ自体に情報開示の課題はありません。 既に&lt;audio&gt;タグ、Flash、Web Audioを使えばインタラクション無しで音を出す事ができます。 接続されているデバイスの中には業務用の照明コントロールシステムがあるかも知れません。その場合、それはステージの照明を制御できます。
-            しかしながらこれは極めて稀であり、知られているどんなシステムにも、ショート・メッセージによって最終的にダメージを受けたり情報を流出するものはありません。 最悪、悪意のあるページが照明を点滅させたりした場合、ユーザーはページを閉じて照明コントローラーをリセットできます。
-          </li><li>ショート・メッセージの受信： ノートオン/ノートオフ/コントローラー・メッセージの受信はどんな情報の開示やセキュリティの問題も
+            しかしながらこれは極めて稀であり、知られているどんなシステムにも、ショートメッセージによって最終的にダメージを受けたり情報を流出するものはありません。 最悪、悪意のあるページが照明を点滅させたりした場合、ユーザーはページを閉じて照明コントローラーをリセットできます。
+          </li><li>ショートメッセージの受信： ノートオン/ノートオフ/コントローラーメッセージの受信はどんな情報の開示やセキュリティの問題も
             引き起こしません。
             識別に使用できるデータはなく、単にコントローラーのメッセージのストリームであり、 (クロック型のメッセージを除いて)
             これらの全てはMIDIデバイスでのユーザーの操作によるものです。 これはキーボードやマウスのイベントに非常に似ています。
@@ -1736,7 +1736,7 @@ navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );</pre>
             それを使ってデータ、例えばサンプラーに保存されているサンプルをダウンロードする事ができ、
             あるいはそのデータを入れ替える(サンプルやデバイスのパッチを消去する)事も可能です
             (とは言え、これらのシナリオは特定の機器に対するコードを書く必要があります)。
-            また、幾つかのサンプラーはシステムエクスクルーシブ・メッセージでサンプルの録音の開始が可能です。
+            また、幾つかのサンプラーはシステムエクスクルーシブメッセージでサンプルの録音の開始が可能です。
             そのためもしサンプラーに専用のマイクが接続されている場合(実際には一般的ではありませんが可能ではあります)、
             それは特定のデバイスが短時間の音を録音して、ユーザーの介在なしにネットワークにアップロードする事が可能かも知れません
             (デバイスからのオーディオストリームを流す事はできず、ほとんどのサンプラーのメモリー量には限界があります。
@@ -1746,33 +1746,33 @@ navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );</pre>
             システムを一意に識別する事が可能です
             (繰り返しますが、"全てのパッチを取得してハッシュする"標準化された方法はありませんので、
             これには多くのデバイス固有のコードが必要です)。
-            この事は、システムエクスクルーシブ・メッセージがセキュリティ・カテゴリに分類されるべきものである事を示唆しています。
+            この事は、システムエクスクルーシブメッセージがセキュリティカテゴリに分類されるべきものである事を示唆しています。
         </li></ol>
       <p>これらの機能に対して、MIDIによってどんなシナリオが可能になるのかを確認する事も有用です：
         </p><ol>
-          <li>ショート・メッセージの受信。これはWeb MIDIに取って最も魅力的なもので、キーボード、ドラムパッド、ギター、
+          <li>ショートメッセージの受信。これはWeb MIDIに取って最も魅力的なもので、キーボード、ドラムパッド、ギター、
             管楽器コントローラー、DJコントローラー、
             その他色々な機器からの入力によって楽器をコントロールでき、
             他のコントロールシナリオと同様にWeb Audio APIで使う事もできます
             (MIDIは何十億ドルもの規模の音楽制作産業で使われているプロトコルであり、
-            Garagebandのようなコンシューマー・アプリケーションだけでなく、
+            Garagebandのようなコンシューマーアプリケーションだけでなく、
             プロ/プロシューマー向けのオーディオ/メディアアプリケーションで使われる、
             コンピューターに接続するためのツマミやボタンを持った物理的なコントローラーが多数存在します)
-          </li><li>ショート・メッセージの送信。
+          </li><li>ショートメッセージの送信。
             送信に関しては、魅力として言えば、かなり少なくなります。
             出力デバイスにハードウェアシンセサイザーのようなものを接続すると言うシナリオは現在のマーケットではそれほど一般的ではありません。
             ただ大きな例外として、多くのMIDIコントローラーが、
-            インジケータライトの外部ホストコントロールを持っている事でこれが劇的に有用なものに変わります。
+            インジケーターライトの外部ホストコントロールを持っている事でこれが劇的に有用なものに変わります。
             例えば、非常に一般的なNovationのLaunchpadコントローラーはMIDIノートオン/オフメッセージの送信によって
             ボタンの点灯/消灯や色の変化を行う事ができます。ほとんど全てのDJコントローラーも同様です。
-          </li><li>SysExの送受信。 明らかにハイエンド・ハードウェア機器での高度な通信では、SysExが必要になります。
+          </li><li>SysExの送受信。 明らかにハイエンドハードウェア機器での高度な通信では、SysExが必要になります。
             残念ながら、幾つかの共通MIDIコマンド(例えば、一般的なスタート/ストップ/巻き戻し/早送りコマンドであるMIDIマシンコントロールなど)
-            もシステムエクスクルーシブ・メッセージとして送られます。 そして多くのデバイスではプログラムパッチ、高度なコントローラー・メッセージ、
-            ファームウェア・ダウンロードなどにシステムエクスクルーシブを使用しており、
+            もシステムエクスクルーシブメッセージとして送られます。 そして多くのデバイスではプログラムパッチ、高度なコントローラーメッセージ、
+            ファームウェアダウンロードなどにシステムエクスクルーシブを使用しており、
             それはWeb MIDIのシナリオとしても強く要求される事です。 デバイスによってはSysExを直接制御プロトコルとして使用します。
             それは多くのデータを1つの"メッセージ"にパックできるため、
-            多くのデバイスはSysExをパッチや設定データの保存/読み込みのための安価なコンピューター・ストレージとして使用します。
-            ハードウェアに対してWeb MIDIを使って、Webベースの設定やプログラミング・インターフェースを提供する事に強い興味を持っている
+            多くのデバイスはSysExをパッチや設定データの保存/読み込みのための安価なコンピューターストレージとして使用します。
+            ハードウェアに対してWeb MIDIを使って、Webベースの設定やプログラミングインターフェースを提供する事に強い興味を持っている
             メジャーな音楽ハードウェア生産者もいます。
             簡単に言えば、SysExを使えなくすると、ハイエンドのシナリオが使えなくなるだけではないという事です。
         </li></ol>
@@ -1780,10 +1780,10 @@ navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );</pre>
         そのままゲームパッドAPIによるゲームパッドの列挙による付加的なフィンガープリンティングに類似しています。
         典型的なユーザーではせいぜい数個のデバイスが接続され、それらが設定されても、
         晒される情報はそのインターフェース自体のものです(即ちユーザーが設定したデータではありません)。
-      </p><p>ショート・メッセージの受信に関するセキュリティ上の懸案も小さいものです。
+      </p><p>ショートメッセージの受信に関するセキュリティ上の懸案も小さいものです。
         それはキーボード、マウス、モバイル/ラップトップの加速度センサー、タッチ入力、ゲームパッドイベントのリストアップに類似しています。
         付加的に晒される情報はなく、クロック信号以外の全てのメッセージはユーザーの操作で発生します。
-      </p><p>ショート・メッセージの送信に関する懸案は全てのオーディオ出力に類似しています。
+      </p><p>ショートメッセージの送信に関する懸案は全てのオーディオ出力に類似しています。
         ユーザーの情報を上書きしたりユーザーの情報を読み取る事はできず、ただ、音を出し、パッチを変更し、
         (稀な設定では)照明を点灯/消灯します。しかしこれは破壊的ではなく、永続するものではありません。
       </p><p>その一方、システムエクスクルーシブは潜在的に制限の少ないものであるため、APIの中でより注意深く、
